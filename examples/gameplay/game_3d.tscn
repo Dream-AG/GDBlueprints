@@ -1,0 +1,1038 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://addons/GDBlueprints/examples/gameplay/game_3d.gd" id="1_uwxf6"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_gohgi"]
+size = Vector3(0.7, 1.6, 0.7)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_6suhh"]
+albedo_color = Color(0.39215687, 0.58431375, 0.92941177, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_vap02"]
+material = SubResource("StandardMaterial3D_6suhh")
+size = Vector3(0.7, 1.6, 0.7)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cmmef"]
+size = Vector3(1.5, 2, 1.5)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_wf67f"]
+albedo_color = Color(0.4, 0.7, 1, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_s0ais"]
+material = SubResource("StandardMaterial3D_wf67f")
+size = Vector3(1.5, 2, 1.5)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_cpw6i"]
+size = Vector3(24, 1, 18)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xd5kq"]
+albedo_color = Color(0.16, 0.22, 0.3, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_82ui6"]
+material = SubResource("StandardMaterial3D_xd5kq")
+size = Vector3(24, 1, 18)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7d6nx"]
+size = Vector3(2, 2, 4)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_anl8l"]
+albedo_color = Color(0.4392157, 0.5019608, 0.5647059, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_qels2"]
+material = SubResource("StandardMaterial3D_anl8l")
+size = Vector3(2, 2, 4)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_ug2y4"]
+size = Vector3(3, 0.3, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4bipt"]
+albedo_color = Color(0.8039216, 0.36078432, 0.36078432, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_j7t2i"]
+material = SubResource("StandardMaterial3D_4bipt")
+size = Vector3(3, 0.3, 2)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8hmyv"]
+size = Vector3(1.5, 1, 2)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_rtmc4"]
+albedo_color = Color(0.18039216, 0.54509807, 0.34117648, 1)
+
+[sub_resource type="BoxMesh" id="BoxMesh_t2s5t"]
+material = SubResource("StandardMaterial3D_rtmc4")
+size = Vector3(1.5, 1, 2)
+
+[node name="Gameplay3D" type="Node" unique_id=1192613724]
+script = ExtResource("1_uwxf6")
+dimension = 3
+metadata/blueprints_for_godot_graph = {
+"connections": [{
+"from_node": &"tick",
+"from_port": 0,
+"to_node": &"velocity",
+"to_port": 0
+}, {
+"from_node": &"velocity",
+"from_port": 0,
+"to_node": &"move",
+"to_port": 0
+}, {
+"from_node": &"move",
+"from_port": 0,
+"to_node": &"collect",
+"to_port": 0
+}, {
+"from_node": &"collect",
+"from_port": 0,
+"to_node": &"hud",
+"to_port": 0
+}, {
+"from_node": &"input",
+"from_port": 0,
+"to_node": &"velocity",
+"to_port": 2
+}, {
+"from_node": &"velocity",
+"from_port": 2,
+"to_node": &"move",
+"to_port": 2
+}, {
+"from_node": &"overlaps",
+"from_port": 0,
+"to_node": &"collect",
+"to_port": 2
+}, {
+"from_node": &"start_round",
+"from_port": 0,
+"to_node": &"spawn_loop",
+"to_port": 0
+}, {
+"from_node": &"spawn_loop",
+"from_port": 0,
+"to_node": &"spawn",
+"to_port": 0
+}, {
+"from_node": &"spawn_loop",
+"from_port": 1,
+"to_node": &"hud",
+"to_port": 0
+}, {
+"from_node": &"spawn_loop",
+"from_port": 3,
+"to_node": &"spawn",
+"to_port": 3
+}, {
+"from_node": &"pickup",
+"from_port": 0,
+"to_node": &"valid_pickup",
+"to_port": 0
+}, {
+"from_node": &"valid_pickup",
+"from_port": 0,
+"to_node": &"score",
+"to_port": 0
+}, {
+"from_node": &"score",
+"from_port": 0,
+"to_node": &"destroy",
+"to_port": 0
+}, {
+"from_node": &"pickup",
+"from_port": 1,
+"to_node": &"destroy",
+"to_port": 1
+}, {
+"from_node": &"damage",
+"from_port": 0,
+"to_node": &"hurt",
+"to_port": 0
+}, {
+"from_node": &"damage",
+"from_port": 1,
+"to_node": &"hurt",
+"to_port": 2
+}, {
+"from_node": &"reach_goal",
+"from_port": 0,
+"to_node": &"unlocked",
+"to_port": 0
+}, {
+"from_node": &"unlocked",
+"from_port": 0,
+"to_node": &"win",
+"to_port": 0
+}],
+"execution_version": 4,
+"next_id": 0,
+"nodes": [{
+"brick_class": "EventPhysicsTickSensor",
+"brick_type": "sensor",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"tick",
+"instance_name": "",
+"position": Vector2(0, 0),
+"properties": {}
+}, {
+"brick_class": "InputVector",
+"brick_type": "value",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"input",
+"instance_name": "",
+"position": Vector2(0, 300),
+"properties": {
+"deadzone": -1.0,
+"down": "ui_down",
+"left": "ui_left",
+"right": "ui_right",
+"up": "ui_up"
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"velocity",
+"instance_name": "",
+"position": Vector2(340, 0),
+"properties": {
+"_applied_parameters": "input: Vector2, delta: float",
+&"_applied_return_type": "Vector3",
+"_execution_id": "velocity",
+"argument_delta": "_delta",
+"argument_input_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").input_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\", -1.0)",
+&"function_name": "desired_3d",
+"parameters": "input: Vector2, delta: float",
+&"return_type": "Vector3",
+"target": "self",
+"target_expression": ""
+}
+}, {
+"brick_class": "MoveCharacter3D",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"move",
+"instance_name": "",
+"position": Vector2(700, 0),
+"properties": {
+"body": "$Player",
+"velocity": "Vector3.ZERO",
+"velocity_expression": "_flow.values[\"velocity\"][\"result\"]"
+}
+}, {
+"brick_class": "OverlappingBodies",
+"brick_type": "value",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"overlaps",
+"instance_name": "",
+"position": Vector2(700, 400),
+"properties": {
+"area": "$Player/Detector"
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"collect",
+"instance_name": "",
+"position": Vector2(1060, 0),
+"properties": {
+"_applied_parameters": "bodies: Array[Node]",
+&"_applied_return_type": "void",
+"_execution_id": "collect",
+"argument_bodies_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").overlapping_bodies($Player/Detector)",
+&"function_name": "collect_bodies",
+"parameters": "bodies: Array[Node]",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"hud",
+"instance_name": "",
+"position": Vector2(1420, 0),
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "hud",
+&"function_name": "update_hud",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+}
+}, {
+"brick_class": "CustomEventSensor",
+"brick_type": "sensor",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"start_round",
+"instance_name": "",
+"position": Vector2(0, 800),
+"properties": {
+"_applied_parameters": "",
+"event_name": "start_round",
+"parameters": ""
+}
+}, {
+"brick_class": "ForEachExecution",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"spawn_loop",
+"instance_name": "",
+"position": Vector2(340, 800),
+"properties": {
+"_execution_id": "spawn_loop",
+"items": "spawn_transforms",
+"items_expression": ""
+}
+}, {
+"brick_class": "SpawnScene",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"spawn",
+"instance_name": "",
+"position": Vector2(700, 800),
+"properties": {
+"local_transform": "null",
+"local_transform_expression": "_flow.values.get(\"spawn_loop\", {}).get(\"item\")",
+"parent": "$Pickups",
+"scene": "pickup_scene"
+}
+}, {
+"brick_class": "CustomEventSensor",
+"brick_type": "sensor",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"pickup",
+"instance_name": "",
+"position": Vector2(0, 1400),
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "pickup",
+"parameters": "body: Node"
+}
+}, {
+"brick_class": "BranchController",
+"brick_type": "controller",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"valid_pickup",
+"instance_name": "",
+"position": Vector2(340, 1400),
+"properties": {
+"condition": true,
+"condition_expression": "is_instance_valid(_flow.event_arguments[\"pickup\"][\"body\"]) and not _flow.event_arguments[\"pickup\"][\"body\"].is_queued_for_deletion() and _flow.event_arguments[\"pickup\"][\"body\"].is_in_group(\"gdb_demo_pickup\")"
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"score",
+"instance_name": "",
+"position": Vector2(700, 1400),
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "score",
+&"function_name": "add_score",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+}
+}, {
+"brick_class": "DestroyNode",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"destroy",
+"instance_name": "",
+"position": Vector2(1060, 1400),
+"properties": {
+"target": "self",
+"target_expression": "_flow.event_arguments[\"pickup\"][\"body\"]"
+}
+}, {
+"brick_class": "CustomEventSensor",
+"brick_type": "sensor",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"damage",
+"instance_name": "",
+"position": Vector2(0, 1800),
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "damage",
+"parameters": "body: Node"
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"hurt",
+"instance_name": "",
+"position": Vector2(340, 1800),
+"properties": {
+"_applied_parameters": "body: Node",
+&"_applied_return_type": "void",
+"_execution_id": "hurt",
+"argument_body_expression": "_flow.event_arguments[\"damage\"][\"body\"]",
+&"function_name": "apply_damage",
+"parameters": "body: Node",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+}
+}, {
+"brick_class": "CustomEventSensor",
+"brick_type": "sensor",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"reach_goal",
+"instance_name": "",
+"position": Vector2(0, 2200),
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "reach_goal",
+"parameters": "body: Node"
+}
+}, {
+"brick_class": "BranchController",
+"brick_type": "controller",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"unlocked",
+"instance_name": "",
+"position": Vector2(340, 2200),
+"properties": {
+"condition": true,
+"condition_expression": "score == 3 and health > 0 and _flow.event_arguments[\"reach_goal\"][\"body\"] == player"
+}
+}, {
+"brick_class": "CallGraphFunction",
+"brick_type": "actuator",
+"debug_enabled": false,
+"debug_message": "",
+"id": &"win",
+"instance_name": "",
+"position": Vector2(700, 2200),
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "win",
+&"function_name": "finish_game",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+}
+}],
+"schema_version": 2
+}
+metadata/blueprints_for_godot = [{
+"actuators": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "input: Vector2, delta: float",
+&"_applied_return_type": "Vector3",
+"_execution_id": "velocity",
+"argument_delta": "_delta",
+"argument_input_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").input_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\", -1.0)",
+&"function_name": "desired_3d",
+"parameters": "input: Vector2, delta: float",
+&"return_type": "Vector3",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "move",
+"body": "$Player",
+"velocity": "Vector3.ZERO",
+"velocity_expression": "_flow.values[\"velocity\"][\"result\"]"
+},
+"type": "MoveCharacter3D"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "bodies: Array[Node]",
+&"_applied_return_type": "void",
+"_execution_id": "collect",
+"argument_bodies_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").overlapping_bodies($Player/Detector)",
+&"function_name": "collect_bodies",
+"parameters": "bodies: Array[Node]",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "hud",
+&"function_name": "update_hud",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}],
+"controllers": [],
+"execution_entries": [{
+"input": "in",
+"legacy_async": false,
+"to": "velocity"
+}],
+&"execution_graph": {
+"edges": [{
+"from": "velocity",
+"input": "in",
+"legacy_async": false,
+"output": "then",
+"to": "move"
+}, {
+"from": "move",
+"input": "in",
+"legacy_async": false,
+"output": "then",
+"to": "collect"
+}, {
+"from": "collect",
+"input": "in",
+"legacy_async": false,
+"output": "then",
+"to": "hud"
+}, {
+"from": "spawn_loop",
+"input": "in",
+"legacy_async": false,
+"output": "body",
+"to": "spawn"
+}, {
+"from": "spawn_loop",
+"input": "in",
+"legacy_async": false,
+"output": "completed",
+"to": "hud"
+}, {
+"from": "valid_pickup",
+"input": "in",
+"legacy_async": false,
+"output": "true",
+"to": "score"
+}, {
+"from": "score",
+"input": "in",
+"legacy_async": false,
+"output": "then",
+"to": "destroy"
+}, {
+"from": "unlocked",
+"input": "in",
+"legacy_async": false,
+"output": "true",
+"to": "win"
+}],
+"nodes": {
+"collect": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "bodies: Array[Node]",
+&"_applied_return_type": "void",
+"_execution_id": "collect",
+"argument_bodies_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").overlapping_bodies($Player/Detector)",
+&"function_name": "collect_bodies",
+"parameters": "bodies: Array[Node]",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+},
+"destroy": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "destroy",
+"target": "self",
+"target_expression": "_flow.event_arguments[\"pickup\"][\"body\"]"
+},
+"type": "DestroyNode"
+},
+"hud": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "hud",
+&"function_name": "update_hud",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+},
+"hurt": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "body: Node",
+&"_applied_return_type": "void",
+"_execution_id": "hurt",
+"argument_body_expression": "_flow.event_arguments[\"damage\"][\"body\"]",
+&"function_name": "apply_damage",
+"parameters": "body: Node",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+},
+"move": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "move",
+"body": "$Player",
+"velocity": "Vector3.ZERO",
+"velocity_expression": "_flow.values[\"velocity\"][\"result\"]"
+},
+"type": "MoveCharacter3D"
+},
+"score": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "score",
+&"function_name": "add_score",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+},
+"spawn": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "spawn",
+"local_transform": "null",
+"local_transform_expression": "_flow.values.get(\"spawn_loop\", {}).get(\"item\")",
+"parent": "$Pickups",
+"scene": "pickup_scene"
+},
+"type": "SpawnScene"
+},
+"spawn_loop": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_execution_id": "spawn_loop",
+"items": "spawn_transforms",
+"items_expression": ""
+},
+"type": "ForEachExecution"
+},
+"unlocked": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "unlocked",
+"condition": true,
+"condition_expression": "score == 3 and health > 0 and _flow.event_arguments[\"reach_goal\"][\"body\"] == player"
+},
+"type": "BranchController"
+},
+"valid_pickup": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "valid_pickup",
+"condition": true,
+"condition_expression": "is_instance_valid(_flow.event_arguments[\"pickup\"][\"body\"]) and not _flow.event_arguments[\"pickup\"][\"body\"].is_queued_for_deletion() and _flow.event_arguments[\"pickup\"][\"body\"].is_in_group(\"gdb_demo_pickup\")"
+},
+"type": "BranchController"
+},
+"velocity": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "input: Vector2, delta: float",
+&"_applied_return_type": "Vector3",
+"_execution_id": "velocity",
+"argument_delta": "_delta",
+"argument_input_expression": "preload(\"res://addons/GDBlueprints/core/gameplay_runtime.gd\").input_vector(\"ui_left\", \"ui_right\", \"ui_up\", \"ui_down\", -1.0)",
+&"function_name": "desired_3d",
+"parameters": "input: Vector2, delta: float",
+&"return_type": "Vector3",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+},
+"win": {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "win",
+&"function_name": "finish_game",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}
+},
+"version": 4
+},
+"name": "exec_tick",
+"sensors": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {},
+"type": "EventPhysicsTickSensor"
+}]
+}, {
+"actuators": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_execution_id": "spawn_loop",
+"items": "spawn_transforms",
+"items_expression": ""
+},
+"type": "ForEachExecution"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "spawn",
+"local_transform": "null",
+"local_transform_expression": "_flow.values.get(\"spawn_loop\", {}).get(\"item\")",
+"parent": "$Pickups",
+"scene": "pickup_scene"
+},
+"type": "SpawnScene"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "hud",
+&"function_name": "update_hud",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}],
+"controllers": [],
+"execution_entries": [{
+"input": "in",
+"legacy_async": false,
+"to": "spawn_loop"
+}],
+"name": "exec_start_round",
+"sensors": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+"event_name": "start_round",
+"parameters": ""
+},
+"type": "CustomEventSensor"
+}]
+}, {
+"actuators": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "valid_pickup",
+"condition": true,
+"condition_expression": "is_instance_valid(_flow.event_arguments[\"pickup\"][\"body\"]) and not _flow.event_arguments[\"pickup\"][\"body\"].is_queued_for_deletion() and _flow.event_arguments[\"pickup\"][\"body\"].is_in_group(\"gdb_demo_pickup\")"
+},
+"type": "BranchController"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "score",
+&"function_name": "add_score",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "destroy",
+"target": "self",
+"target_expression": "_flow.event_arguments[\"pickup\"][\"body\"]"
+},
+"type": "DestroyNode"
+}],
+"controllers": [],
+"execution_entries": [{
+"input": "in",
+"legacy_async": false,
+"to": "valid_pickup"
+}],
+"name": "exec_pickup",
+"sensors": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "pickup",
+"parameters": "body: Node"
+},
+"type": "CustomEventSensor"
+}]
+}, {
+"actuators": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "body: Node",
+&"_applied_return_type": "void",
+"_execution_id": "hurt",
+"argument_body_expression": "_flow.event_arguments[\"damage\"][\"body\"]",
+&"function_name": "apply_damage",
+"parameters": "body: Node",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}],
+"controllers": [],
+"execution_entries": [{
+"input": "in",
+"legacy_async": false,
+"to": "hurt"
+}],
+"name": "exec_damage",
+"sensors": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "damage",
+"parameters": "body: Node"
+},
+"type": "CustomEventSensor"
+}]
+}, {
+"actuators": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+&"_execution_id": "unlocked",
+"condition": true,
+"condition_expression": "score == 3 and health > 0 and _flow.event_arguments[\"reach_goal\"][\"body\"] == player"
+},
+"type": "BranchController"
+}, {
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "",
+&"_applied_return_type": "void",
+"_execution_id": "win",
+&"function_name": "finish_game",
+"parameters": "",
+&"return_type": "void",
+"target": "self",
+"target_expression": ""
+},
+"type": "CallGraphFunction"
+}],
+"controllers": [],
+"execution_entries": [{
+"input": "in",
+"legacy_async": false,
+"to": "unlocked"
+}],
+"name": "exec_reach_goal",
+"sensors": [{
+"debug_enabled": false,
+"debug_message": "",
+"instance_name": "",
+"properties": {
+"_applied_parameters": "body: Node",
+"event_name": "reach_goal",
+"parameters": "body: Node"
+},
+"type": "CustomEventSensor"
+}]
+}]
+
+[node name="Pickups" type="Node" parent="." unique_id=1795299769]
+
+[node name="Player" type="CharacterBody3D" parent="." unique_id=269002771]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9, 1, 0)
+
+[node name="@CollisionShape3D@1342" type="CollisionShape3D" parent="Player" unique_id=20592564]
+shape = SubResource("BoxShape3D_gohgi")
+
+[node name="@MeshInstance3D@1343" type="MeshInstance3D" parent="Player" unique_id=1591038610]
+mesh = SubResource("BoxMesh_vap02")
+
+[node name="Detector" type="Area3D" parent="Player" unique_id=358852057]
+collision_layer = 0
+collision_mask = 2
+
+[node name="@CollisionShape3D@1344" type="CollisionShape3D" parent="Player/Detector" unique_id=327434538]
+shape = SubResource("BoxShape3D_cmmef")
+
+[node name="@MeshInstance3D@1345" type="MeshInstance3D" parent="Player/Detector" unique_id=1701950475]
+visible = false
+mesh = SubResource("BoxMesh_s0ais")
+
+[node name="Ground" type="StaticBody3D" parent="." unique_id=1206639621]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.5, 0)
+
+[node name="@CollisionShape3D@1346" type="CollisionShape3D" parent="Ground" unique_id=1989427057]
+shape = SubResource("BoxShape3D_cpw6i")
+
+[node name="@MeshInstance3D@1347" type="MeshInstance3D" parent="Ground" unique_id=889665741]
+mesh = SubResource("BoxMesh_82ui6")
+
+[node name="Wall" type="StaticBody3D" parent="." unique_id=1467141781]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0)
+
+[node name="@CollisionShape3D@1348" type="CollisionShape3D" parent="Wall" unique_id=1684557237]
+shape = SubResource("BoxShape3D_7d6nx")
+
+[node name="@MeshInstance3D@1349" type="MeshInstance3D" parent="Wall" unique_id=1550240208]
+mesh = SubResource("BoxMesh_qels2")
+
+[node name="Hazard" type="Area3D" parent="." unique_id=247915824]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2, 0.1, -5)
+collision_layer = 0
+
+[node name="@CollisionShape3D@1350" type="CollisionShape3D" parent="Hazard" unique_id=689164611]
+shape = SubResource("BoxShape3D_ug2y4")
+
+[node name="@MeshInstance3D@1351" type="MeshInstance3D" parent="Hazard" unique_id=472059384]
+mesh = SubResource("BoxMesh_j7t2i")
+
+[node name="Goal" type="Area3D" parent="." unique_id=1480851578]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0.5, 0)
+collision_layer = 0
+
+[node name="@CollisionShape3D@1352" type="CollisionShape3D" parent="Goal" unique_id=1382298826]
+shape = SubResource("BoxShape3D_8hmyv")
+
+[node name="@MeshInstance3D@1353" type="MeshInstance3D" parent="Goal" unique_id=1847143703]
+mesh = SubResource("BoxMesh_t2s5t")
+
+[node name="@Camera3D@1354" type="Camera3D" parent="." unique_id=1696521526]
+transform = Transform3D(0.8290376, -0.33653066, 0.44659132, 0, 0.79863554, 0.601815, -0.5591929, -0.49892727, 0.6620989, 15, 20, 22)
+projection = 1
+current = true
+size = 29.0
+
+[node name="@DirectionalLight3D@1355" type="DirectionalLight3D" parent="." unique_id=1040230136]
+transform = Transform3D(0.90630776, 0.34618863, -0.24240388, 0, 0.57357645, 0.81915206, 0.42261827, -0.74240386, 0.5198368, 0, 0, 0)
+
+[node name="HUD" type="CanvasLayer" parent="." unique_id=108502514]
+
+[node name="Panel" type="PanelContainer" parent="HUD" unique_id=1831659342]
+offset_left = 16.0
+offset_top = 12.0
+offset_right = 16.0
+offset_bottom = 12.0
+
+[node name="Rows" type="VBoxContainer" parent="HUD/Panel" unique_id=416770593]
+layout_mode = 2
+
+[node name="@Label@1356" type="Label" parent="HUD/Panel/Rows" unique_id=2138263260]
+layout_mode = 2
+theme_override_font_sizes/font_size = 23
+text = "  GDBlueprints | Collect & Escape  "
+
+[node name="Status" type="Label" parent="HUD/Panel/Rows" unique_id=823091175]
+layout_mode = 2
+text = "Loading graph..."
+
+[node name="@Label@1357" type="Label" parent="HUD/Panel/Rows" unique_id=16758301]
+layout_mode = 2
+text = "Arrow keys: move | Avoid red hazards | Space/Enter: jump"
+
+[node name="Restart" type="Button" parent="HUD/Panel/Rows" unique_id=2051439033]
+layout_mode = 2
+focus_mode = 0
+text = "Restart round"
+
+[connection signal="body_entered" from="Hazard" to="." method="damage"]
+[connection signal="body_entered" from="Goal" to="." method="reach_goal"]
+[connection signal="pressed" from="HUD/Panel/Rows/Restart" to="." method="restart"]

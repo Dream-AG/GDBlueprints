@@ -1,0 +1,6854 @@
+{
+  "cases": [
+    {
+      "case": "defaults",
+      "id": "CameraZoom2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "CameraZoom2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Character2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "use_acceleration=toggled",
+      "id": "Character2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "inherit_platform_velocity_on_jump=toggled",
+      "id": "Character2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Disable Shape",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Enable Shape",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Set Layer Bit",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Set Mask Bit",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Enable Monitoring",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "action=Disable Monitoring",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "bit_enabled=toggled",
+      "id": "Collision2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Force2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "space=Global",
+      "id": "Force2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "space=Local",
+      "id": "Force2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "apply_at_point=toggled",
+      "id": "Force2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Gravity2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "use_mass=toggled",
+      "id": "Gravity2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "override_world_gravity=toggled",
+      "id": "Gravity2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "reset_velocity_on_direction_change=toggled",
+      "id": "Gravity2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X or Y"
+      ],
+      "id": "Impulse2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "Impulse2DActuator",
+      "status": "parse passed",
+      "target": "RigidBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Jump2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X or Y"
+      ],
+      "id": "LinearVelocity2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "LinearVelocity2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "motion_type=Location",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "motion_type=Rotation",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Character Velocity",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Translate",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Position",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Local",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Global",
+      "id": "Motion2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Cursor Visibility",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Mouse Look",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Look Towards",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Move Towards Cursor",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Move To Mouse Click",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "cursor_visible=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "use_x_axis=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "use_y_axis=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "x_invert=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "y_invert=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "recenter_cursor=toggled",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mouse_facing_axis=+X",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mouse_facing_axis=-X",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mouse_facing_axis=+Y",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mouse_facing_axis=-Y",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "click_button=Left",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "click_button=Right",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "click_button=Middle",
+      "id": "Mouse2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "MoveCharacter2D",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Seek",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Flee",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Arrive",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Wander",
+      "id": "MoveTowards2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "behavior=Maintain Distance",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Orbit",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Group",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Coordinates",
+      "id": "MoveTowards2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "orbit_direction=Clockwise",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "orbit_direction=Counterclockwise",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "face_target=toggled",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "use_navigation=toggled",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "MoveTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "ObjectFlash2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "effect=Single Flash",
+      "id": "ObjectFlash2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "effect=Strobe",
+      "id": "ObjectFlash2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "effect=Color Strobe",
+      "id": "ObjectFlash2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "ObjectShake2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X or Y"
+      ],
+      "id": "Position2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Character Velocity",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Translate",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "movement_method=Set Position",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Local",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Global",
+      "id": "Position2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "set_value=toggled",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "set_min=toggled",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "set_max=toggled",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "ProgressBar2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "RotateTowards2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "RotateTowards2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "id": "RotateTowards2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "target_mode=Group",
+      "id": "RotateTowards2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in Rotation"
+      ],
+      "id": "Rotation2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "Rotation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Local",
+      "id": "Rotation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "space=Global",
+      "id": "Rotation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Save",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Load",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "scope=This Node",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "scope=Target Node",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "scope=Group",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "save_position=toggled",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "save_rotation=toggled",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "save_variables=toggled",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "restore_velocity=toggled",
+      "id": "SaveLoad2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "use_tween=toggled",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Linear",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Sine",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Quad",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Cubic",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Quart",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Quint",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Expo",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Circ",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Back",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Elastic",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "transition=Bounce",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease=In",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease=Out",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease=In Out",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease=Out In",
+      "id": "Scale2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "ScreenShake2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "SetCamera2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "SmoothFollowCamera2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "follow_pos_x=toggled",
+      "id": "SmoothFollowCamera2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "follow_pos_y=toggled",
+      "id": "SmoothFollowCamera2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "follow_rotation=toggled",
+      "id": "SmoothFollowCamera2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "SplitScreen2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "layout=Vertical",
+      "id": "SplitScreen2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "layout=Horizontal",
+      "id": "SplitScreen2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "SpriteAnimation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Play",
+      "id": "SpriteAnimation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "SpriteAnimation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "SpriteAnimation2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Teleport2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Target Node",
+      "id": "Teleport2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Coordinates",
+      "id": "Teleport2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "mode=Vector Variable",
+      "details": [
+        "Select or enter a Vector2 variable."
+      ],
+      "id": "Teleport2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "clear_velocity=toggled",
+      "id": "Teleport2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "Text2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "Text2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "Text2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "Text2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "Text2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Static",
+      "id": "Text2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "target_mode=Self",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "target_mode=Node",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "Tween2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Linear",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Sine",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Quint",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Quart",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Quad",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Expo",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Elastic",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Bounce",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Back",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Spring",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Circular",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "trans_type=Cubic",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease_type=In",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease_type=Out",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease_type=In Out",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ease_type=Out In",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "Tween2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPath2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "path_source=Node2D Positions:node_positions",
+      "id": "WaypointPath2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "path_source=Path2D:path2d",
+      "id": "WaypointPath2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "loop_mode=Loop:loop",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPath2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "loop_mode=Ping Pong:ping_pong",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPath2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "loop_mode=Once:once",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPath2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "face_direction=toggled",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPath2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Go To State:go_to_state",
+      "id": "AnimationTreeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Set Blend Parameter:set_parameter",
+      "id": "AnimationTreeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Advanced - Set Condition:set_condition_value",
+      "id": "AnimationTreeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "condition_value=true",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "condition_value=false",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "param_type=Float",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "param_type=Int",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "param_type=Bool",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "param_type=Vector2",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "param_bool=toggled",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "CameraZoomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "camera_type=Camera 3D",
+      "id": "CameraZoomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "camera_type=Camera 2D",
+      "id": "CameraZoomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "CameraZoomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CharacterActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_acceleration=toggled",
+      "id": "CharacterActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "inherit_platform_velocity_on_jump=toggled",
+      "id": "CharacterActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a collision target node name."
+      ],
+      "id": "CollisionActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Disable Shape",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Enable Shape",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Set Layer Bit",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Set Mask Bit",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Enable Monitoring",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Disable Monitoring",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "bit_enabled=toggled",
+      "id": "CollisionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EditObjectActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "edit_type=Add Object",
+      "details": [
+        "Select or enter a scene to spawn."
+      ],
+      "id": "EditObjectActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "edit_type=End Object",
+      "id": "EditObjectActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "edit_type=Replace Mesh",
+      "details": [
+        "Select or enter a mesh file."
+      ],
+      "id": "EditObjectActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "velocity_local=toggled",
+      "id": "EditObjectActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "end_mode=Queue Free",
+      "id": "EditObjectActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "end_mode=Free Immediate",
+      "id": "EditObjectActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fog_enabled=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_enabled=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_normalized=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_blend_mode=Additive",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_blend_mode=Screen",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_blend_mode=Softlight",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_blend_mode=Replace",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "glow_blend_mode=Mix",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ssao_enabled=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ssil_enabled=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "tonemap_mode=Linear",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "tonemap_mode=Reinhardt",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "tonemap_mode=Filmic",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "tonemap_mode=ACES",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "adjustment_enabled=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "EnvironmentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "ForceActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "ForceActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "ForceActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "ForceActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GravityActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "use_mass=toggled",
+      "id": "GravityActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "override_world_gravity=toggled",
+      "id": "GravityActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "ImpulseActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "impulse_type=Central",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "impulse_type=Positional",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "impulse_type=Torque",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "ImpulseActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "JumpActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "inherit_platform_velocity=toggled",
+      "id": "JumpActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "light_type=OmniLight3D",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "light_type=SpotLight3D",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "light_type=DirectionalLight3D",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_color=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_energy=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_indirect_energy=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_specular=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_shadow=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "shadow_enabled=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_visible=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "light_visible=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_range=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_spot_angle=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_spot_attenuation=toggled",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Normal",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Flicker",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Strobe",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Pulse",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Fade In",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "fx=Fade Out",
+      "id": "LightActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "LinearVelocityActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "LinearVelocityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Set",
+      "id": "LinearVelocityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Add",
+      "id": "LinearVelocityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Average",
+      "id": "LinearVelocityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "local=toggled",
+      "id": "LinearVelocityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least two Input actions."
+      ],
+      "id": "LookAtInputActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=-Z (Godot Default)",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=+Z",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=+X",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=-X",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "camera_relative=toggled",
+      "id": "LookAtInputActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=-Z (Godot Default)",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=+Z",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=+X",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=-X",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ignore_platform_motion=toggled",
+      "id": "LookAtMovementActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "motion_type=Location",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "motion_type=Rotation",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Character Velocity",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Translate",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Position",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "camera_relative=toggled",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "call_move_and_slide=toggled",
+      "id": "MotionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Cursor Visibility",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Mouse Look",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Look Towards",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Move Towards Cursor",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Move To Mouse Click",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "cursor_visible=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_x_axis=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_y_axis=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "x_invert=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "y_invert=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "x_rotation_axis=X",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "x_rotation_axis=Y",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "x_rotation_axis=Z",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "y_rotation_axis=X",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "y_rotation_axis=Y",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "y_rotation_axis=Z",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "x_use_local=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "y_use_local=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "recenter_cursor=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=+X",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=-X",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=+Y",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=-Y",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=+Z",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_facing_axis=-Z",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_lock_y=toggled",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "click_button=Left",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "click_button=Right",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "click_button=Middle",
+      "id": "MouseActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "MoveCharacter3D",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Seek",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Flee",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Arrive",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Wander",
+      "id": "MoveTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "behavior=Maintain Distance",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Orbit",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "behavior=Path Follow",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Group",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "target_mode=Vector Variable",
+      "details": [
+        "Select or enter a Vector3 target variable."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "orbit_direction=Clockwise",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "orbit_direction=Counterclockwise",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "face_target=toggled",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=+X",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=-X",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=+Y",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=-Y",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=+Z",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "facing_axis=-Z",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "use_navmesh_normal=toggled",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "self_terminate=toggled",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "lock_y_velocity=toggled",
+      "details": [
+        "Select or enter a target group or node name."
+      ],
+      "id": "MoveTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "ObjectFlashActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "effect=Single Flash",
+      "id": "ObjectFlashActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "effect=Strobe",
+      "id": "ObjectFlashActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "effect=Color Strobe",
+      "id": "ObjectFlashActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least one scene."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "action=Spawn",
+      "details": [
+        "Select or enter at least one scene."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "action=Despawn All",
+      "id": "ObjectPoolActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "spawn_mode=Random",
+      "details": [
+        "Select or enter at least one scene."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "spawn_mode=All",
+      "details": [
+        "Select or enter at least one scene."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "spawn_at_self=toggled",
+      "details": [
+        "Select or enter at least one scene.",
+        "Select or enter a spawn node."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "inherit_rotation=toggled",
+      "details": [
+        "Select or enter at least one scene."
+      ],
+      "id": "ObjectPoolActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "shake_type=Rotate",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "shake_type=Translate",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "shake_type=Scale",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Tiny",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Light",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Medium",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Heavy",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Side Hit",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Vertical Hit",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Scale Pop",
+      "id": "ObjectShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a parent node."
+      ],
+      "id": "ParentActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Set Parent",
+      "details": [
+        "Select or enter a parent node."
+      ],
+      "id": "ParentActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Remove Parent",
+      "id": "ParentActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "keep_transform=toggled",
+      "details": [
+        "Select or enter a parent node."
+      ],
+      "id": "ParentActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "physics_action=Suspend Physics",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "physics_action=Resume Physics",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "physics_action=Set Mass",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "physics_action=Set Gravity Scale",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "physics_action=Set Linear Damping",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "physics_action=Set Angular Damping",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "physics_action=Enable Contact Monitor",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "physics_action=Disable Contact Monitor",
+      "id": "PhysicsActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "PositionActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Character Velocity",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Translate",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "movement_method=Set Position",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "camera_relative=toggled",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "call_move_and_slide=toggled",
+      "id": "PositionActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_value=toggled",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_min=toggled",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_max=toggled",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "ProgressBarActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node or group name."
+      ],
+      "id": "RotateTowardsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Group",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axes=Y Only (Horizontal)",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axes=X Only (Vertical)",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axes=Both",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=Positive Z (+Z)",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_axis=Negative Z (-Z)",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "clamp_x=toggled",
+      "id": "RotateTowardsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "RotationActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "RotationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "RotationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "RotationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Save",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Load",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "scope=This Node",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "scope=Target Node",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "scope=Group",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "save_position=toggled",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "save_rotation=toggled",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "save_variables=toggled",
+      "id": "SaveLoadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_tween=toggled",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Linear",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Sine",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quad",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Cubic",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quart",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quint",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Expo",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Circ",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Back",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Elastic",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Bounce",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=In",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=Out",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=In Out",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=Out In",
+      "id": "ScaleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Light",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Medium",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Heavy",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Explosion",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Subtle Idle",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_params=toggled",
+      "id": "ScreenShakeActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SetCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_pos_x=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_pos_y=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_pos_z=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_rot_x=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_rot_y=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "follow_rot_z=toggled",
+      "id": "SmoothFollowCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a sound file."
+      ],
+      "id": "SoundActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Play",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Fade In",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Fade Out",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Restart",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Overlap",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Ignore If Playing",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "positional=toggled",
+      "id": "SoundActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_2=Vertical",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_2=Horizontal",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_2=2x2 Grid",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_2=Top Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_2=Bottom Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_3=Vertical",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_3=Horizontal",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_3=2x2 Grid",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_3=Top Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_3=Bottom Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_4=Vertical",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_4=Horizontal",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_4=2x2 Grid",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_4=Top Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "layout_4=Bottom Wide",
+      "id": "SplitScreenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SpriteFramesActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Play",
+      "id": "SpriteFramesActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "SpriteFramesActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "SpriteFramesActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "SpriteFramesActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "TeleportActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Target Node",
+      "id": "TeleportActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Coordinates",
+      "id": "TeleportActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Vector Variable",
+      "details": [
+        "Select or enter a Vector3 variable."
+      ],
+      "id": "TeleportActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "copy_rotation=toggled",
+      "id": "TeleportActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "TextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "TextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "TextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "TextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "TextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Static",
+      "id": "TextActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Mouse",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Joystick",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Both",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "rotate_character=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "align_mode=Instant",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "align_mode=Smooth",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "capture_mouse=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_sensitivity=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "invert_x=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "invert_y=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_invert=toggled",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "joy_stick=Left Stick",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "joy_stick=Right Stick",
+      "id": "ThirdPersonCameraActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Put a Value or Variable in X,Y, or Z"
+      ],
+      "id": "TorqueActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "TorqueActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Local",
+      "id": "TorqueActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "space=Global",
+      "id": "TorqueActuator",
+      "status": "parse passed",
+      "target": "RigidBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "path_source=Node3D Positions:node_positions",
+      "id": "WaypointPathActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "path_source=Path3D:path3d",
+      "id": "WaypointPathActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop_mode=Loop",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "loop_mode=Ping Pong",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "loop_mode=Once",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "path_mode=Sequential",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "path_mode=Random",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "avoid_immediate_repeat=toggled",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "face_direction=toggled",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "follow_curve_tilt=toggled",
+      "details": [
+        "Select or enter at least one waypoint."
+      ],
+      "id": "WaypointPathActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an animation."
+      ],
+      "id": "AnimationActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Play",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Queue",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_backwards=toggled",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "from_end=toggled",
+      "id": "AnimationActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a sound file."
+      ],
+      "id": "Audio2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Play",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Fade In",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Fade Out",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "player_type=AudioStreamPlayer",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "player_type=AudioStreamPlayer2D",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Restart",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Overlap",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "play_mode=Ignore If Playing",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "Audio2DActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "BreakExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CallCustomEventActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CallGraphFunction",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CallObjectMethodActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CaptureState",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ConnectSignalActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "forward_arguments=toggled",
+      "id": "ConnectSignalActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "disconnect=toggled",
+      "id": "ConnectSignalActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ContinueExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DelayExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DestroyActorActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DestroyNode",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DoOnceExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "start_closed=toggled",
+      "id": "DoOnceExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EmitSignalActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EmitTypedSignal",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ForEachExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ForLoopExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "FunctionReturn",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GameActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Exit",
+      "id": "GameActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Reload Scene",
+      "id": "GameActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Pause",
+      "id": "GameActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Screenshot",
+      "id": "GameActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GetNodeByPathActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GetNodesInGroupActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GetObjectPropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node or group name.",
+        "Select or enter a Position variable."
+      ],
+      "id": "GetTransformsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Group",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "get_position=toggled",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "get_rotation=toggled",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "get_scale=toggled",
+      "id": "GetTransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a source node name.",
+        "Select or enter a variable name.",
+        "Select or enter a destination variable name."
+      ],
+      "id": "GetVariableActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "GetVariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "source=Self",
+      "id": "GetVariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "source=Node Name",
+      "id": "GetVariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "source=GlobalVars",
+      "id": "GetVariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Tiny",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Light",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Medium",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Heavy",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "preset=Custom",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "restart_if_active=toggled",
+      "id": "HitStopActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "LoadGameData",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "recover_backup=toggled",
+      "id": "LoadGameData",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a signal subject."
+      ],
+      "id": "MessageActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "MessageActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "ModulateActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_modulate=Self Modulate",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_modulate=Modulate",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "ModulateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least one music track.",
+        "Music Tracks needs at least one audio resource."
+      ],
+      "id": "MusicActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "music_mode=Tracks",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "music_mode=Set",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "music_mode=Control",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "persist=toggled",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_play=toggled",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "control_action=Play",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "control_action=Stop",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "control_action=Pause",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "control_action=Resume",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "control_action=Crossfade",
+      "id": "MusicActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a Godot scene."
+      ],
+      "id": "OpenLevelActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "OpenLevelActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter at least one resource to preload."
+      ],
+      "id": "PreloadActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "load_mode=Background (Threaded)",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "load_mode=Immediate (Blocking)",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Any",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Scene",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Material",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Texture",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=AudioStream",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Mesh",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "resource_type=Shader",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "on_complete_signal=toggled",
+      "id": "PreloadActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "PrintStringActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "as_warning=toggled",
+      "id": "PrintStringActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Node",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Mesh Instance",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Collision Shape",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Light",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Rigid Body",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Character Body",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Animation Player",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Control",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Label",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Button",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Camera",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Sprite",
+      "id": "PropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_type=Custom",
+      "details": [
+        "Select or enter a custom property name.",
+        "Select or enter a custom property value."
+      ],
+      "id": "PropertyActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "RandomActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Bool Constant",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Bool Uniform",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Bool Bernoulli",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Int Constant",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Int Uniform",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Int Poisson",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Float Constant",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Float Uniform",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Float Normal",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "distribution=Float Neg Exp",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "bool_value=toggled",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_seed=toggled",
+      "id": "RandomActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "RestoreState",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Vibrate",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Stop",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Pattern",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Single Pulse",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Double Pulse",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Sustained",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Ramp Up",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Ramp Down",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pattern=Heartbeat",
+      "id": "RumbleActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SaveGameData",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SceneActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Restart",
+      "id": "SceneActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Set Scene",
+      "details": [
+        "Select or enter a scene."
+      ],
+      "id": "SceneActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "ScreenFlashActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SequenceExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SetFunctionLocal",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SetObjectPropertyActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SpawnScene",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a state."
+      ],
+      "id": "StateActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "StateActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SwitchIntExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "SwitchStringExecution",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Self",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Node Name",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "TransformsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "use_global_transform=toggled",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_position=toggled",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "position_mode=Values",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "position_mode=Vector Variable",
+      "details": [
+        "Select or enter a Position variable."
+      ],
+      "id": "TransformsActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "set_rotation=toggled",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "rotation_mode=Values",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "rotation_mode=Variable",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "set_scale=toggled",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "scale_mode=Values",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "scale_mode=Vector Variable",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_tween=toggled",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Linear",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Sine",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quad",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Cubic",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quart",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Quint",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Expo",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Circ",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Back",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Elastic",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "transition=Bounce",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=In",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=Out",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=In Out",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease=Out In",
+      "id": "TransformsActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Self",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "target_mode=Node",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "TweenActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Linear",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Sine",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Quint",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Quart",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Quad",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Expo",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Elastic",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Bounce",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Back",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Spring",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Circular",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trans_type=Cubic",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease_type=In",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease_type=Out",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease_type=In Out",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ease_type=Out In",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "TweenActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name.",
+        "Select or enter a value."
+      ],
+      "id": "VariableActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Assign",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Add",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Copy",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Toggle",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=bool",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=int",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=float",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=String",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=Vector2",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=Vector3",
+      "id": "VariableActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "VisibilityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Show",
+      "id": "VisibilityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Hide",
+      "id": "VisibilityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "action=Toggle",
+      "id": "VisibilityActuator",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a sound file."
+      ],
+      "id": "UIAudio2DActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Play",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Stop",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Pause",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Fade In",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Fade Out",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "player_type=AudioStreamPlayer",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "player_type=AudioStreamPlayer2D",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "play_mode=Restart",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "play_mode=Overlap",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "play_mode=Ignore If Playing",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "UIAudio2DActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIButtonActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Emit Pressed",
+      "id": "UIButtonActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Press",
+      "id": "UIButtonActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Release",
+      "id": "UIButtonActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Toggle",
+      "id": "UIButtonActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIFocusActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Grab Focus",
+      "id": "UIFocusActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Release Focus",
+      "id": "UIFocusActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "UIModulateActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "target_modulate=Self Modulate",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "target_modulate=Modulate",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "UIModulateActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIPopupActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Show",
+      "id": "UIPopupActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Hide",
+      "id": "UIPopupActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Toggle",
+      "id": "UIPopupActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Popup Centered",
+      "id": "UIPopupActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "set_value=toggled",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "set_min=toggled",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "set_max=toggled",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "transition=toggled",
+      "id": "UIProgressBarActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIScreenFlashActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Set",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Add",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "axis=Vertical",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "axis=Horizontal",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "axis=Both",
+      "id": "UIScrollActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UISliderActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Set",
+      "id": "UISliderActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "mode=Add",
+      "id": "UISliderActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UITabActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Set",
+      "id": "UITabActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Next",
+      "id": "UITabActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Previous",
+      "id": "UITabActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "UITextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "UITextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "UITextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "UITextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Variable",
+      "details": [
+        "Select or enter a variable name."
+      ],
+      "id": "UITextActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "mode=Static",
+      "id": "UITextActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "target_mode=Self",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "target_mode=Node",
+      "details": [
+        "Select or enter a target node name."
+      ],
+      "id": "UITweenActuator",
+      "status": "needs configuration"
+    },
+    {
+      "case": "node_name_source=Literal Node Name",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "node_name_source=String Variable",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "export_node_name=toggled",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Linear",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Sine",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Quint",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Quart",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Quad",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Expo",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Elastic",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Bounce",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Back",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Spring",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Circular",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trans_type=Cubic",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "ease_type=In",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "ease_type=Out",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "ease_type=In Out",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "ease_type=Out In",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "loop=toggled",
+      "id": "UITweenActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIVisibilityActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Show",
+      "id": "UIVisibilityActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Hide",
+      "id": "UIVisibilityActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Toggle",
+      "id": "UIVisibilityActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIWindowActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Show",
+      "id": "UIWindowActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Hide",
+      "id": "UIWindowActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Toggle",
+      "id": "UIWindowActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "action=Popup Centered",
+      "id": "UIWindowActuator",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "BranchController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "condition=toggled",
+      "id": "BranchController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter Script."
+      ],
+      "id": "CastToScriptController",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "CastToScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=AND",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=OR",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=NAND",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=NOR",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=XOR",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "all_states=toggled",
+      "id": "Controller",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a script file."
+      ],
+      "id": "ScriptController",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=AND",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=OR",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=NAND",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=NOR",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "logic_mode=XOR",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "all_states=toggled",
+      "id": "ScriptController",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an Area2D node name."
+      ],
+      "id": "Collision2DSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=Entered",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=Exited",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=Overlapping",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detect_bodies=toggled",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detect_areas=toggled",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "filter_type=Any",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "filter_type=Group",
+      "details": [
+        "Select or enter a group or node name to filter."
+      ],
+      "id": "Collision2DSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "filter_type=Name",
+      "details": [
+        "Select or enter a group or node name to filter."
+      ],
+      "id": "Collision2DSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "Collision2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "all_axis=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "pos_x=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "neg_x=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "pos_y=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "neg_y=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "use_local_axes=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "ignore_platform_motion=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "Movement2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "contact_type=On Floor",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "contact_type=On Wall",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "contact_type=On Ceiling",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "require_contact_loss_first=toggled",
+      "id": "Physics2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=All",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=+X",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=-X",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=+Y",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=-Y",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=+Z",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "axis=-Z",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=Any",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=All",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detection_mode=None",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "inverse=toggled",
+      "id": "Proximity2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "store_object=toggled",
+      "details": [
+        "Select or enter a variable to store the detected object."
+      ],
+      "id": "Proximity2DSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "Raycast2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detect_mode=Any",
+      "id": "Raycast2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "detect_mode=Group",
+      "details": [
+        "Select or enter a group name."
+      ],
+      "id": "Raycast2DSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "detect_mode=Nothing",
+      "id": "Raycast2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "Raycast2DSensor",
+      "status": "parse passed",
+      "target": "CharacterBody2D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an Action name."
+      ],
+      "id": "ActuatorSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "ActuatorSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trigger_on=Active",
+      "id": "ActuatorSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trigger_on=Inactive",
+      "id": "ActuatorSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a state name."
+      ],
+      "id": "AnimationTreeSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Current State",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Condition",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mode=Parameter Compare",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "condition_expected=toggled",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Equal",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Not Equal",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Greater",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Less",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Greater Equal",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "compare_op=Less Equal",
+      "id": "AnimationTreeSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an Area3D node name."
+      ],
+      "id": "CollisionSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=Entered",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=Exited",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=Overlapping",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detect_bodies=toggled",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detect_areas=toggled",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "filter_type=Any",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "filter_type=Group",
+      "details": [
+        "Select or enter a group or node name to filter."
+      ],
+      "id": "CollisionSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "filter_type=Name",
+      "details": [
+        "Select or enter a group or node name to filter."
+      ],
+      "id": "CollisionSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "CollisionSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "all_axis=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pos_x=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "neg_x=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pos_y=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "neg_y=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "pos_z=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "neg_z=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_local_axes=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "ignore_platform_motion=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "MovementSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "contact_type=On Floor",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "contact_type=On Wall",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "contact_type=On Ceiling",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "require_contact_loss_first=toggled",
+      "id": "PhysicsSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=All",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=+X",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=-X",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=+Y",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=-Y",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=+Z",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "axis=-Z",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=Any",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=All",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_mode=None",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "inverse=toggled",
+      "id": "ProximitySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "store_object=toggled",
+      "details": [
+        "Select or enter a variable to store the detected object."
+      ],
+      "id": "ProximitySensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "RaycastSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detect_mode=Any",
+      "id": "RaycastSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detect_mode=Group",
+      "details": [
+        "Select or enter a group name."
+      ],
+      "id": "RaycastSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "detect_mode=Nothing",
+      "id": "RaycastSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "invert=toggled",
+      "id": "RaycastSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "AlwaysSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "enabled=toggled",
+      "id": "AlwaysSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "CustomEventSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DelaySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "repeat=toggled",
+      "id": "DelaySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "DoOnceSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "start_closed=toggled",
+      "id": "DoOnceSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EventBeginPlaySensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "EventPhysicsTickSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "FunctionEntry",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Pressed",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Just Pressed",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Just Released",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Any Pressed",
+      "id": "InputMapSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Any Just Pressed",
+      "id": "InputMapSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Any Just Released",
+      "id": "InputMapSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "input_mode=Axis",
+      "details": [
+        "Select or enter a negative Input action.",
+        "Select or enter a positive Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "invert=toggled",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "InputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "id": "MessageSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "match_mode=Exact",
+      "id": "MessageSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "match_mode=Contains",
+      "id": "MessageSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "match_mode=Starts With",
+      "id": "MessageSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_type=Button",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_type=Wheel",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_type=Movement",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_type=Hover Object",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "detection_type=Hover Any",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_button=Left",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_button=Right",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "mouse_button=Middle",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "button_state=Pressed",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "button_state=Released",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "button_state=Held",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "wheel_direction=Up",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "wheel_direction=Down",
+      "id": "MouseSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "RandomSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trigger_mode=Chance",
+      "id": "RandomSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trigger_mode=Value",
+      "id": "RandomSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "trigger_mode=Range",
+      "id": "RandomSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "use_seed=toggled",
+      "id": "RandomSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "store_value=toggled",
+      "details": [
+        "Select or enter a variable to store the random value."
+      ],
+      "id": "RandomSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name.",
+        "Select or enter a comparison value."
+      ],
+      "id": "VariableSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Equal",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Not Equal",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Interval",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Changed",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Greater Than",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Less Than",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Greater or Equal",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "evaluation_type=Less or Equal",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=bool",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=int",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=float",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=String",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=Vector2",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "item_type=Vector3",
+      "id": "VariableSensor",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "UIAlwaysSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "enabled=toggled",
+      "id": "UIAlwaysSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Just Pressed",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Pressed",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Just Released",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Hovering",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Focused",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Toggled On",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "event=Toggled Off",
+      "id": "UIButtonSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIDelaySensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "repeat=toggled",
+      "id": "UIDelaySensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Pressed",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Just Pressed",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Just Released",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "input_mode=Any Pressed",
+      "id": "UIInputMapSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "input_mode=Any Just Pressed",
+      "id": "UIInputMapSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "input_mode=Any Just Released",
+      "id": "UIInputMapSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "input_mode=Axis",
+      "details": [
+        "Select or enter a negative Input action.",
+        "Select or enter a positive Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "invert=toggled",
+      "details": [
+        "Select or enter an Input action."
+      ],
+      "id": "UIInputMapSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a signal subject."
+      ],
+      "id": "UIMessageSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "UIMessageSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "match_mode=Exact",
+      "id": "UIMessageSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "match_mode=Contains",
+      "id": "UIMessageSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "match_mode=Starts With",
+      "id": "UIMessageSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "UIRandomSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trigger_mode=Chance",
+      "id": "UIRandomSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trigger_mode=Value",
+      "id": "UIRandomSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "trigger_mode=Range",
+      "id": "UIRandomSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "use_seed=toggled",
+      "id": "UIRandomSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "store_value=toggled",
+      "details": [
+        "Select or enter a variable to store the random value."
+      ],
+      "id": "UIRandomSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "defaults",
+      "details": [
+        "Select or enter a variable name.",
+        "Select or enter a comparison value."
+      ],
+      "id": "UIVariableSensor",
+      "status": "needs configuration"
+    },
+    {
+      "case": "configured",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Equal",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Not Equal",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Interval",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Changed",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Greater Than",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Less Than",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Greater or Equal",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "evaluation_type=Less or Equal",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=bool",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=int",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=float",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=String",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=Vector2",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "item_type=Vector3",
+      "id": "UIVariableSensor",
+      "status": "parse passed",
+      "target": "Control"
+    },
+    {
+      "case": "defaults",
+      "id": "EnumValue",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "InputVector",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "OverlappingBodies",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    },
+    {
+      "case": "defaults",
+      "id": "GetActorTransformValue",
+      "status": "parse passed",
+      "target": "CharacterBody3D"
+    }
+  ],
+  "checked": 938,
+  "engine": "4.7.2-stable (official)",
+  "failed": 0
+}

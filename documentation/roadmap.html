@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Roadmap · GDBlueprints</title><script>try{document.documentElement.dataset.theme=localStorage.getItem('gdblueprints-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script><link rel="stylesheet" href="assets/manual.css"></head>
+<body><header><a class="brand" href="index.html">GDBlueprints</a><span>0.10.1 alpha</span><button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button><nav aria-label="Documentation"><a href="index.html">Start</a><a href="user-guide.html">Graph guide</a><a href="nodes.html">All nodes</a><a href="contributing.html">Create nodes</a><a href="testing-validation.html">Testing</a></nav></header>
+<main><h1 id="roadmap">Roadmap</h1>
+<h2 id="completed-foundations">Completed foundations</h2>
+<p>Milestone 1: unified execution, structured control flow, cancellation, shared budgets, and compatibility tests.</p>
+<p>Milestone 2: typed Custom Events, synchronous graph functions, parameters and returns, independent locals, native typed collections, explicit enum authoring, and documented value evaluation.</p>
+<p>Milestone 3: reflected method/property/signal authoring, typed signal callbacks, graph-to-script and script-to-graph calls, safe signature updates, handwritten-source preservation, generated-edit detection, and runtime/editor interoperability fixtures.</p>
+<p>These foundations are available in 0.7.0-alpha. They do not imply full-game runtime coverage for every existing action.</p>
+<h2 id="milestone-4-graph-debugging">Milestone 4: graph debugging</h2>
+<p>Completed in 0.7.0-alpha: stable-ID source mapping, active-node highlights, graph breakpoints on asynchronous execution nodes, Continue/Step Into/Step Over/Step Out controls, and bounded inspection of arguments, loop values, locals, captured results, and watched members. Synchronous function nodes remain trace-only to preserve ordinary non-awaiting GDScript calls.</p>
+<h2 id="milestone-5-core-gameplay-coverage">Milestone 5: core gameplay coverage</h2>
+<p>Completed in 0.8.0-alpha: two playable 2D/3D Collect &amp; Escape scenes, editable saved graphs, direct-reference movement/spawn/deletion/overlap nodes, configurable input values, automatic physics scheduling metadata, and automated real-physics integration fixtures. The examples exercise collision, 3D jump/landing, pickup collection, native signals, damage/respawn, HUD win/loss state, and restart. See <a href="gameplay-examples.html">Playable examples</a>.</p>
+<p>This is representative local single-player coverage, not full validation of every legacy node or every genre. The examples intentionally demonstrate graph/GDScript interoperability using typed handwritten helpers.</p>
+<h2 id="persistence-and-release">Persistence and release</h2>
+<ul>
+<li>Milestone 6 is completed in 0.9.0-alpha: data-only typed snapshots, versioned saves, explicit schema migration callbacks, corruption/backup handling, validated template migration and value-node reuse, indexed graph processing, and a 1,021-node integration fixture. See <a href="persistence-and-reuse.html">Persistence and reuse</a>.</li>
+<li>Milestone 7 is implemented in 0.10.0-alpha for the Windows 4.7.2 alpha target: native debug/release export tests, inactive release debugger, reproducible packaging, clean-install checks, isolated regression tools, publication guidance and Windows/Linux CI configuration. Human acceptance and untested platforms remain explicit release requirements. See <a href="release.html">Release and publishing</a>.</li>
+</ul>
+<p>Multiplayer deserves a separate design and testing milestone. Arbitrary GDScript-to-graph conversion and complete Unreal API parity are outside the current contract.</p></main><footer>GDBlueprints · Visual GDScript for Godot · <a href="../THIRD_PARTY_NOTICES.md">Credits and license</a></footer>
+<script src="assets/manual.js"></script></body></html>

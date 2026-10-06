@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Create nodes · GDBlueprints</title><script>try{document.documentElement.dataset.theme=localStorage.getItem('gdblueprints-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script><link rel="stylesheet" href="assets/manual.css"></head>
+<body><header><a class="brand" href="index.html">GDBlueprints</a><span>0.10.1 alpha</span><button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button><nav aria-label="Documentation"><a href="index.html">Start</a><a href="user-guide.html">Graph guide</a><a href="nodes.html">All nodes</a><a href="contributing.html">Create nodes</a><a href="testing-validation.html">Testing</a></nav></header>
+<main><h1 id="create-blueprint-nodes">Create Blueprint nodes</h1>
+<h2 id="project-nodes">Project nodes</h2>
+<p>The simplest extension is <strong>one <code>.gd</code> file</strong> in <code>res://gdblueprints_nodes/</code>. No central registry edit, editor panel edit, or Python installation is required. Copy the working template from <code>addons/GDBlueprints/templates/modern_action_node_template.gd</code>, rename it, and edit its unique ID, display name, properties, and behavior. Save the file; the editor&#x27;s file-system rescan refreshes node discovery. Reopen the editor if a changed script remains cached.</p>
+<p>Core contributors place files under <code>bricks/sensors</code>, <code>bricks/controllers</code>, <code>bricks/actuators</code>, or <code>bricks/values</code>. Keep game-specific extensions outside the addon so upgrades preserve them.</p>
+<h2 id="optional-generator">Optional generator</h2>
+<p>Run from your Godot project root with Python 3.10 or newer:</p>
+<pre><code>python addons/GDBlueprints/tools/create_node.py --name &quot;Print Score&quot; --kind action --category Game --godot-term &quot;GDScript: print(score)&quot;</code></pre>
+<p>This creates <code>gdblueprints_nodes/print_score.gd</code> and refuses to overwrite an existing file. Implement its behavior, then validate and compile a sample graph. The generator supports event, action, and value nodes. Flow nodes require an existing compiler semantic or a tested compiler addition.</p>
+<h2 id="the-single-file-contract">The single-file contract</h2>
+<ol>
+<li>Extend <code>core/blueprint_node.gd</code> and keep <code>@tool</code> so the editor can inspect the node.</li>
+<li>Set its kind and name in <code>_init()</code> after calling <code>super._init()</code>.</li>
+<li>Provide a permanent unique <code>class</code> ID, display name, type, description, category, and native Godot teaching term in <code>get_brick_info()</code>.</li>
+<li>Initialize defaults in <code>_initialize_properties()</code> and describe editable controls in <code>get_property_definitions()</code>.</li>
+<li>Generate behavior with <code>generate_ir()</code> or <code>generate_code()</code>. Pure values implement <code>get_value_output_definitions()</code>.</li>
+<li>Add meaningful validation and test actual runtime behavior in a small scene.</li>
+</ol>
+<p>See the <a href="node-api.html">Node API</a> for a complete action example and typed-input rules. Supply clear tooltips; use Godot APIs and explicit references. IDs must remain stable after users save graphs with your node.</p>
+<p>Pure-value nodes with properties use the same editable controls and typed data-input declarations as actions, with no execution pins. Implement <code>get_value_output_definitions()</code> using the current properties; a wired <code>property_name_expression</code> takes precedence over the unconnected field. Configurations and data wires survive save/reload. Outputs are evaluated when consumed, so pure nodes must not cause gameplay side effects.</p>
+<p>Actions that must update with physics can add <code>&quot;requires_physics&quot;: true</code> to their metadata. Automatic update chains then use <code>_physics_process</code> without a compiler ID list change. Explicit Custom Event calls still run in their caller&#x27;s context. See <code>bricks/actuators/2d/move_character_2d.gd</code> and the <a href="gameplay-examples.html">playable examples</a> for working definitions and integration fixtures.</p>
+<h2 id="extend-a-built-in-node">Extend a built-in node</h2>
+<p>Copy <code>templates/extend_existing_node_template.gd</code> into your project extension folder. It inherits Print String and adds a prefix setting. Or generate an inherited skeleton:</p>
+<pre><code>python addons/GDBlueprints/tools/create_node.py --name &quot;Game Print&quot; --kind action --extends-node res://addons/GDBlueprints/bricks/actuators/common/print_string_actuator.gd</code></pre>
+<p>Use the same kind as the base node. Give the extension its own ID. Call <code>super</code> to keep base defaults and pins, then add yours. Override the generation method used by the base and compose its result. Edit these files in Godot&#x27;s Script workspace or an external editor.</p>
+<p>The extension appears as a separate node; existing graphs keep the original type. Replace and reconnect nodes where desired. Changing an addon file directly is possible but a plugin upgrade may overwrite it.</p>
+<h2 id="document-and-verify">Document and verify</h2>
+<p>Describe use cases, target requirements, Godot equivalents, and failure behavior in the node metadata and tooltips. Built-in documentation is generated from that metadata; no help-link table needs updating. Run the catalog export and site build after adding a built-in node. Project extension help currently opens this workflow; publish additional documentation with your custom node as needed.</p>
+<p>Run definition validation, compile connected inputs and outputs, then test runtime behavior, save/reopen, and the View Documentation destination. See <a href="testing-validation.html">Testing</a>. A successful parse alone is insufficient for physics, async work, or scene/resource effects.</p></main><footer>GDBlueprints · Visual GDScript for Godot · <a href="../THIRD_PARTY_NOTICES.md">Credits and license</a></footer>
+<script src="assets/manual.js"></script></body></html>

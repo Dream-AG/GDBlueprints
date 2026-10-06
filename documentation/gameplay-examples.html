@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Playable examples · GDBlueprints</title><script>try{document.documentElement.dataset.theme=localStorage.getItem('gdblueprints-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script><link rel="stylesheet" href="assets/manual.css"></head>
+<body><header><a class="brand" href="index.html">GDBlueprints</a><span>0.10.1 alpha</span><button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button><nav aria-label="Documentation"><a href="index.html">Start</a><a href="user-guide.html">Graph guide</a><a href="nodes.html">All nodes</a><a href="contributing.html">Create nodes</a><a href="testing-validation.html">Testing</a></nav></header>
+<main><h1 id="playable-gameplay-examples">Playable gameplay examples</h1>
+<p>Milestone 5 adds two small <strong>Collect &amp; Escape</strong> games using the same graph design: a top-down 2D arena and a 3D arena with gravity and jumping. They are representative integration fixtures, not a claim that every existing node or every game genre is production-tested.</p>
+<h2 id="run-a-game">Run a game</h2>
+<ol>
+<li>Enable GDBlueprints and open <code>res://addons/GDBlueprints/examples/gameplay/game_2d.tscn</code> or <code>game_3d.tscn</code>.</li>
+<li>Run the current scene with F6. Generated scripts are included, so an initial compile is unnecessary.</li>
+<li>Move with the arrow keys. In 3D, Space or Enter jumps. Collect the three gold pickups, avoid red hazards, and enter the green exit. The button restarts the round after a win or loss.</li>
+<li>Select the scene root and open GDBlueprints to inspect or edit its graph. Compile and save after edits.</li>
+</ol>
+<p>The scenes use the project&#x27;s existing <code>ui_left</code>, <code>ui_right</code>, <code>ui_up</code>, <code>ui_down</code>, and <code>ui_accept</code> Input Map actions. They do not add or overwrite project settings. If you have changed those actions, use your assigned controls or edit the Input Vector node. In 3D, input follows world X/Z axes, not camera-relative axes.</p>
+<h2 id="follow-the-graph">Follow the graph</h2>
+<ul>
+<li>Physics Tick reads Input Vector, calls a typed velocity helper, runs Move Character, queries overlaps, then updates the HUD. Velocity is in units per second; <code>move_and_slide()</code> handles the timestep.</li>
+<li>Start Round iterates three local transforms and uses Spawn Scene to create pickups under the explicit Pickups parent.</li>
+<li>Pickup checks that a body is a live, uncollected pickup, adds to the score, then uses Destroy Node. Queued bodies are ignored to prevent double scoring.</li>
+<li>Native Area signals call typed Damage and Reach Goal Custom Events. The exit branch checks all three pickups and positive health before declaring a win.</li>
+<li>The Restart button calls a handwritten helper that resets health, score and position, removes the old pickups, and calls Start Round again.</li>
+</ul>
+<p>Player collision mask 1 blocks the arena&#x27;s solid geometry. Pickups occupy layer 2, which the player&#x27;s Detector Area monitors without physically blocking the player. Hazard and goal Areas monitor the player on layer 1. Overlap snapshots update on physics steps; teleporting an Area or body does not synchronously refresh them.</p>
+<h2 id="graph-and-gdscript-work-together">Graph and GDScript work together</h2>
+<p>The two <code>game_2d.gd</code> / <code>game_3d.gd</code> files contain sealed generated regions. Their shared parent script, <code>game_base.gd</code>, supplies typed velocity, score, health, HUD and restart helpers. This deliberately demonstrates the supported hybrid workflow: edit graph routing in the graph and edit handwritten helpers in Godot&#x27;s Script tab or an external editor. Do not edit the sealed generated region.</p>
+<p>The helpers use native CharacterBody, Area, PackedScene, Label and Button APIs. For example, 3D gravity is added to vertical velocity using delta, and a jump is allowed only while <code>is_on_floor()</code> is true. Use the Call Function method picker to replace a helper with your own typed script method, or a graph function with the same signature.</p>
+<h2 id="new-reusable-nodes">New reusable nodes</h2>
+<ul>
+<li><strong>Input Vector</strong>: four named input actions produce a length-limited Vector2. Missing actions produce zero. Deadzone -1 uses the actions&#x27; average deadzone; other values are clamped to the supported range.</li>
+<li><strong>Move Character 2D / Move Character 3D</strong>: an explicit CharacterBody reference and velocity call <code>move_and_slide()</code> once. Invalid, freed, detached or queued targets do nothing. Run once per physics step and do not combine with the older Character Physics node on the same body.</li>
+<li><strong>Spawn Scene</strong>: a PackedScene, live parent and optional local Transform2D/Transform3D produce an Instance output. The transform is applied before entering the tree. Invalid inputs or a dimensional mismatch return null, and Then still runs; use a Branch to check Instance before dereferencing it. Results belong to that execution activation and are available downstream, not across unrelated events. Runtime spawning does not set an editor scene owner. Spawn outside physics-query signal callbacks, or defer the calling event using Godot&#x27;s <code>call_deferred()</code>.</li>
+<li><strong>Destroy Node</strong>: queues a direct Node reference for deletion. Invalid/freed/already queued targets do nothing. Destroying Self cancels its remaining graph path.</li>
+<li><strong>Get Overlapping Bodies</strong>: a direct Area2D/Area3D reference returns the latest <code>Array[Node]</code> overlap snapshot. Invalid targets return an empty array. Monitoring and collision masks must be configured.</li>
+</ul>
+<p>These definitions live in the normal discovered node folders. No special registration is required. Physics actions can declare <code>&quot;requires_physics&quot;: true</code> in <code>get_brick_info()</code> or <code>get_blueprint_definition()</code> to put automatic update chains in <code>_physics_process</code>. A Custom Event still runs when its caller invokes it; this metadata does not reschedule explicit calls.</p>
+<h2 id="verification-and-boundaries">Verification and boundaries</h2>
+<p><code>tests/milestone5_gameplay.gd</code> runs the shipped scenes through real physics frames: normalized input, movement against obstacles, 3D grounded jumping and landing, spawning, overlaps, damage/respawn, cooldown, pickup deletion, win/loss HUD state, button restart, invalid references, transformed parents, and graph save/reload/recompile. It also checks configurable value-node authoring and debugger pause/cancellation regressions.</p>
+<p>Maintainers can deliberately regenerate the examples using <code>tests/build_gameplay_examples.gd</code> in a disposable project. This overwrites the shipped example scenes and their generated scripts; do not use it to compile your own edited example.</p>
+<p>The examples cover local single-player gameplay. They do not validate multiplayer, navigation, animation trees, audio, persistence, every legacy scene effect, or exported builds. Persistence/project scale is Milestone 6; platform/export and Asset Library release validation is Milestone 7.</p></main><footer>GDBlueprints · Visual GDScript for Godot · <a href="../THIRD_PARTY_NOTICES.md">Credits and license</a></footer>
+<script src="assets/manual.js"></script></body></html>

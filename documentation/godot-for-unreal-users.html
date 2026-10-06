@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>From Unreal to Godot · GDBlueprints</title><script>try{document.documentElement.dataset.theme=localStorage.getItem('gdblueprints-theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light')}catch(e){document.documentElement.dataset.theme=matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light'}</script><link rel="stylesheet" href="assets/manual.css"></head>
+<body><header><a class="brand" href="index.html">GDBlueprints</a><span>0.10.1 alpha</span><button id="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">Dark mode</button><nav aria-label="Documentation"><a href="index.html">Start</a><a href="user-guide.html">Graph guide</a><a href="nodes.html">All nodes</a><a href="contributing.html">Create nodes</a><a href="testing-validation.html">Testing</a></nav></header>
+<main><h1 id="from-unreal-to-godot">From Unreal to Godot</h1>
+<h2 id="familiar-names-native-behavior">Familiar names, native behavior</h2>
+<ul>
+<li>An Unreal Actor usually maps to a scene instance composed of Godot Nodes. There is no universal Godot Actor class.</li>
+<li>A component-like responsibility often belongs on a child Node or a Resource, depending on whether it needs scene-tree lifetime.</li>
+<li>Event Tick maps to <code>_process(delta)</code>; physics updates use <code>_physics_process(delta)</code>.</li>
+<li>Event BeginPlay in this release fires on the first process pass after <code>_ready()</code>, not inside <code>_ready()</code> itself.</li>
+<li>Spawn Actor maps to loading a PackedScene and calling <code>instantiate()</code>, then parenting the instance.</li>
+<li>Event Dispatchers map to Godot signals. Use Connect Signal To Custom Event and Emit Signal.</li>
+<li>Actor tags often map to groups. Query groups when objects share a role.</li>
+<li>Editable instance variables map to <code>@export</code> properties configured in the Inspector.</li>
+<li>Persistent services often use Autoloads. Keep per-object state on the object.</li>
+</ul>
+<h2 id="differences-to-learn-early">Differences to learn early</h2>
+<p>Delay is now a latent execution action with Completed and Cancel. Do Once has a Reset input. Timer Event and One Shot Event retain the older event behavior. Sequence and loop bodies await their connected paths; in particular, a delayed Sequence branch finishes before the next output starts. This is an intentional Godot-oriented ordering contract, not a promise of identical Unreal latent-flow behavior. See <a href="execution-model.html">Execution and loops</a>. Save/Load nodes store selected data; they do not serialize an entire running game. Cast To Script checks script inheritance on an existing reference.</p>
+<p>The menu contains domain-specific versions and some compatibility definitions. Read each node&#x27;s reference for exact target requirements. A familiar label is a learning aid, not an assertion of complete Unreal feature parity.</p>
+<h2 id="before-adding-unreal-equivalent-nodes">Before adding Unreal-equivalent nodes</h2>
+<p>Define the Godot use case first. Prefer Nodes, Resources, signals, groups, and explicit references. Reuse a generic compiler capability for branching, loops, and latent execution. Do not implement editor/compiler special cases for every new node.</p></main><footer>GDBlueprints · Visual GDScript for Godot · <a href="../THIRD_PARTY_NOTICES.md">Credits and license</a></footer>
+<script src="assets/manual.js"></script></body></html>

@@ -1,0 +1,176 @@
+# GDBlueprints node index
+
+Generated from the live registry. Open nodes.html for settings, outputs and validation coverage.
+
+- [2D Audio (Audio2DActuator)](nodes.html#Audio2DActuator): Play 2D or UI audio with owner-scoped channels shared by Play, Stop, Pause and Fade nodes.
+- [2D Audio (UIAudio2DActuator)](nodes.html#UIAudio2DActuator): Plays UI or 2D audio.
+- [3D Audio (SoundActuator)](nodes.html#SoundActuator): Play, stop, pause and fade spatial or non-positional audio using shared owner-scoped channels.
+- [3rd Person Camera (ThirdPersonCameraActuator)](nodes.html#ThirdPersonCameraActuator): Orbits a Camera3D around the character via a pivot Node3D. Assign both the pivot and the camera in the Inspector. The camera can live anywhere in the scene — including inside a SubViewport for split screen.
+- [Action Triggered (ActuatorSensor)](nodes.html#ActuatorSensor): Fires TRUE when the named action on this node matches the chosen state. The action must have an instance name set.
+- [Add Force (ForceActuator)](nodes.html#ForceActuator): Applies force to a RigidBody3D.
+- [Add Impulse (ImpulseActuator)](nodes.html#ImpulseActuator): Applies an impulse to a RigidBody3D.
+- [Always (UIAlwaysSensor)](nodes.html#UIAlwaysSensor): Always active while enabled.
+- [Animation Blueprint Parameters (AnimationTreeActuator)](nodes.html#AnimationTreeActuator): Controls Godot AnimationTree parameters and playback.
+- [Animation Tree (AnimationTreeSensor)](nodes.html#AnimationTreeSensor): Checks an AnimationTree state, condition, or parameter. Use for transitions tied to animation state.
+- [Branch (BranchController)](nodes.html#BranchController): Unreal-style Branch. Executes either the True or False output based on Condition.
+- [Branch Condition / Compare (VariableSensor)](nodes.html#VariableSensor): Compares a GDBlueprints variable and produces a boolean condition.
+- [Break (BreakExecution)](nodes.html#BreakExecution): Stops the innermost active loop and runs its Completed path. Remaining actions in that loop body are skipped. An event path outside a loop is a compile error.
+- [Button (UIButtonActuator)](nodes.html#UIButtonActuator): Triggers, toggles, presses, or releases a Button node.
+- [Button (UIButtonSensor)](nodes.html#UIButtonSensor): Detects when a Button is pressed, toggled, hovered, or focused.
+- [Call Custom Event (CallCustomEventActuator)](nodes.html#CallCustomEventActuator): Calls a named Custom Event on Self or another node with typed argument pins. The target's method signature is checked before dispatch; Then continues after dispatch, without waiting for delayed event work.
+- [Call Function (CallGraphFunction)](nodes.html#CallGraphFunction): Calls a synchronous function on Self or another Object. Then receives a per-activation Result; Failed runs if dispatch or return-type validation fails. Function calls share execution budgets.
+- [Call Object Method (CallObjectMethodActuator)](nodes.html#CallObjectMethodActuator): Calls a native or script method on another Godot Object. Arguments are supplied as an Array.
+- [Camera Shake (ScreenShake2DActuator)](nodes.html#ScreenShake2DActuator): Shakes a Camera2D for impact feedback.
+- [Camera Zoom (CameraZoom2DActuator)](nodes.html#CameraZoom2DActuator): Changes Camera2D zoom. 1.0 = normal, 2.0 = zoomed in, 0.5 = zoomed out.
+- [Camera Zoom (CameraZoomActuator)](nodes.html#CameraZoomActuator): Changes camera FOV (3D) or zoom (2D). Drag your camera into the inspector slot.
+- [Capture State (CaptureState)](nodes.html#CaptureState): Copies explicitly named properties from a live Object into a data Dictionary. Unknown fields and live references fail without partial output. Getter code may run; choose plain state fields.
+- [Cast To Script (CastToScriptController)](nodes.html#CastToScriptController): Checks whether Target uses or inherits the selected GDScript. The successful output is the same Godot object reference.
+- [Character 2D Physics (Character2DActuator)](nodes.html#Character2DActuator): Applies gravity, acceleration, friction, grounding, and movement to CharacterBody2D. Use in a physics update graph.
+- [Character Jump (JumpActuator)](nodes.html#JumpActuator): Applies a jump impulse to a CharacterBody3D. Pair with Character Physics for gravity and ground detection.
+- [Character Jump 2D (Jump2DActuator)](nodes.html#Jump2DActuator): Requests a CharacterBody2D jump. Pair with Character 2D Physics for grounding and movement.
+- [Character Physics (CharacterActuator)](nodes.html#CharacterActuator): Applies character gravity, grounding, acceleration, friction, and move_and_slide().
+- [Character Physics (PhysicsSensor)](nodes.html#PhysicsSensor): Checks CharacterBody3D collision state: on floor, on wall, or on ceiling. Use this for jump checks, wall checks, ceiling bumps, and platformer logic.
+- [Collision (CollisionActuator)](nodes.html#CollisionActuator): Changes 3D collision shape, layer, mask, or monitoring settings. Use to enable hitboxes or change collision filtering.
+- [Collision (CollisionSensor)](nodes.html#CollisionSensor): Detects collisions via an Area3D node located by name.  Type the node name (not the full path) into 'Area Node Name'.
+- [Collision 2D (Collision2DSensor)](nodes.html#Collision2DSensor): Detects collisions via an Area2D node located by name.  Type the node name (not the full path) into 'Area Node Name'.
+- [Collisions (Collision2DActuator)](nodes.html#Collision2DActuator): Enables or disables collision shapes, layers, masks, or Area2D monitoring on a named target.
+- [Combine Conditions (Controller)](nodes.html#Controller): Combines event conditions using AND, OR, NAND, NOR, or XOR. Use Branch for separate True and False execution paths.
+- [Connect Signal To Custom Event (ConnectSignalActuator)](nodes.html#ConnectSignalActuator): Connects a Godot signal such as Button.pressed to a named Custom Event on this script.
+- [Continue (ContinueExecution)](nodes.html#ContinueExecution): Skips the rest of the innermost loop body and advances to its next iteration. An event path outside a loop is a compile error.
+- [Custom Event (CustomEventSensor)](nodes.html#CustomEventSensor): Creates a public GDScript event method with optional typed parameters. Argument outputs belong to the current invocation, including delayed paths.
+- [Delay (DelayExecution)](nodes.html#DelayExecution): Pauses this execution path, then runs Completed. Re-entry while waiting is ignored. Cancel stops the waiting activation without Completed. Owner tree exit or a Blueprint state change cancels pending work; other event activations remain independent.
+- [Destroy Actor (DestroyActorActuator)](nodes.html#DestroyActorActuator): Queues a Godot node for deletion. Unreal: Destroy Actor. Godot/GDScript: queue_free().
+- [Destroy Node (DestroyNode)](nodes.html#DestroyNode): Queues an explicit node and its children for deletion. Invalid/already queued targets are ignored. Deleting Self stops its remaining graph execution; other targets leave Then available.
+- [Do Once (DoOnceExecution)](nodes.html#DoOnceExecution): Runs Then once per reset. Reset reopens this node without executing Then. State is shared by all paths entering this node and isolated per scene instance.
+- [Emit Signal (EmitSignalActuator)](nodes.html#EmitSignalActuator): Emits a signal on a Godot Object using its native signal system.
+- [Emit Typed Signal (EmitTypedSignal)](nodes.html#EmitTypedSignal): Emits an existing native or handwritten signal with named typed arguments. Browse Signals to populate its signature. Invalid targets or arguments are skipped with a warning.
+- [Enum Value (EnumValue)](nodes.html#EnumValue): A named integer case from an explicit Enum[Name=value, ...] type. Keep assigned integers stable when saving game state.
+- [Environment (EnvironmentActuator)](nodes.html#EnvironmentActuator): Modifies WorldEnvironment properties at runtime. Drag your WorldEnvironment node into the inspector slot. All value fields accept a number or a variable name / expression.
+- [Event BeginPlay (EventBeginPlaySensor)](nodes.html#EventBeginPlaySensor): Runs once when gameplay begins. Godot equivalent: _ready(). In this graph compiler the connected Actions execute on the first process pass immediately after _ready().
+- [Event Physics Tick (EventPhysicsTickSensor)](nodes.html#EventPhysicsTickSensor): Runs every fixed physics step. Closest Godot equivalent to physics-focused Tick logic.
+- [Event Tick (AlwaysSensor)](nodes.html#AlwaysSensor): Runs every rendered frame. Unreal: Event Tick. Godot: _process(delta).
+- [Focus (UIFocusActuator)](nodes.html#UIFocusActuator): Grabs or releases keyboard/gamepad focus on a Control node.
+- [For Each (ForEachExecution)](nodes.html#ForEachExecution): Iterates a shallow snapshot of an Array in order, awaiting Body before the next item. Index and Item are scoped to Body. Completed also runs for empty arrays or Break. Non-Array input cancels execution.
+- [For Loop (ForLoopExecution)](nodes.html#ForLoopExecution): Visits inclusive First..Last using Step. Awaits each Body, then runs Completed, including after Break or an empty range. Index is valid only inside Body. Step zero cancels execution.
+- [Force (Force2DActuator)](nodes.html#Force2DActuator): Applies continuous force to RigidBody2D. Use for thrust or sustained pushes during physics updates.
+- [Function Entry (FunctionEntry)](nodes.html#FunctionEntry): Defines a synchronous public function with typed parameters, a return type, and per-call locals. Apply Signature commits its declarations. Waiting operations belong in event graphs.
+- [Game (GameActuator)](nodes.html#GameActuator): Controls game execution using the selected operation, including quitting or restarting. Trigger deliberately rather than every frame.
+- [Get Actor Transform (GetActorTransformValue)](nodes.html#GetActorTransformValue): Pure value node exposing several properties of the current Node3D.
+- [Get Node By Path (GetNodeByPathActuator)](nodes.html#GetNodeByPathActuator): Gets a node by a path relative to the current node. This is the direct Godot equivalent of keeping an explicit scene reference.
+- [Get Nodes In Group (GetNodesInGroupActuator)](nodes.html#GetNodesInGroupActuator): Godot-style scene discovery. Groups are usually a better fit than searching the whole scene for every instance of a class.
+- [Get Object Property (GetObjectPropertyActuator)](nodes.html#GetObjectPropertyActuator): Reads an Inspector/script property from a live Godot Object, such as Label.text or Button.disabled.
+- [Get Overlapping Bodies (OverlappingBodies)](nodes.html#OverlappingBodies): Returns an Area2D/Area3D's latest physics overlap snapshot as Array[Node]. Invalid targets return an empty array. Enable monitoring and configure collision masks; moving an Area does not update overlaps immediately.
+- [Get Transforms (GetTransformsActuator)](nodes.html#GetTransformsActuator): Gets position, rotation, and scale from a node or the nearest member of a group and stores the values as variables.
+- [Get Variable (GetVariableActuator)](nodes.html#GetVariableActuator): Reads a variable into another value supported by the generated graph.
+- [Gravity (Gravity2DActuator)](nodes.html#Gravity2DActuator): Sets persistent directional gravity on a RigidBody2D.
+- [Gravity (GravityActuator)](nodes.html#GravityActuator): Sets persistent directional gravity on a RigidBody3D using constant force. Can disable built-in world gravity; use Character Physics for CharacterBody3D.
+- [Hit Stop (HitStopActuator)](nodes.html#HitStopActuator): Briefly pauses or slows game time when an impact lands. Use for attacks, damage, blocks, heavy landings, and breaks. This is also called hit pause or impact freeze.
+- [Impulse 2D (Impulse2DActuator)](nodes.html#Impulse2DActuator): Applies an instantaneous impulse to RigidBody2D. Use a one-shot event for knockback or a launch.
+- [Input (UIInputMapSensor)](nodes.html#UIInputMapSensor): Detects Godot Input Map actions for UI logic.
+- [Input Action (InputMapSensor)](nodes.html#InputMapSensor): Reads a Godot Input Map action. Similar role to an Unreal Enhanced Input Action event.
+- [Input Vector (InputVector)](nodes.html#InputVector): Reads four Input Map actions as a length-limited Vector2. Missing actions return zero; -1 uses the actions' average deadzone. Map X/Y to X/Z for 3D movement.
+- [Light (LightActuator)](nodes.html#LightActuator): Control a light node's properties and apply animated FX effects. Leave Target Light blank to affect this node, or enter another light node name.
+- [Line Trace (2D) (Raycast2DSensor)](nodes.html#Raycast2DSensor): Performs a 2D ray query.
+- [Line Trace (3D) (RaycastSensor)](nodes.html#RaycastSensor): Performs a 3D ray query. Unreal calls this family of operations Line Trace.
+- [Linear Velocity (LinearVelocityActuator)](nodes.html#LinearVelocityActuator): Sets or changes a physics body velocity in 3D. Use to control direction and speed.
+- [Linear Velocity 2D (LinearVelocity2DActuator)](nodes.html#LinearVelocity2DActuator): Sets or changes a physics body velocity in 2D. Use to control direction and speed.
+- [Load Game Data (LoadGameData)](nodes.html#LoadGameData): Reads a versioned data save without modifying live objects. Optional trusted migration Callables are keyed by old version. Recovered reports loading the previous-good backup. Missing, corrupt, unsupported or newer saves return Success false.
+- [Look At Input (LookAtInputActuator)](nodes.html#LookAtInputActuator): Rotates a Node3D to face the combined Input Map direction instead of the movement/slide direction. Type the node name; the generated script finds it in the current scene at runtime.
+- [Look At Movement (LookAtMovementActuator)](nodes.html#LookAtMovementActuator): Rotates a Node3D to face the direction of movement. Type the node name; the generated script finds it in the current scene at runtime.
+- [Message Received (MessageSensor)](nodes.html#MessageSensor): Receives a subject/body message from Send Message. This is separate from native Godot signals.
+- [Message Received (UI) (UIMessageSensor)](nodes.html#UIMessageSensor): Receives a GDBlueprints message.
+- [Modulate (ModulateActuator)](nodes.html#ModulateActuator): Sets or smoothly transitions the color/alpha of a UI or 2D node found by name anywhere in the current scene tree.
+- [Modulate (UIModulateActuator)](nodes.html#UIModulateActuator): Sets or transitions color/alpha on a Control or CanvasItem node.
+- [Motion (MotionActuator)](nodes.html#MotionActuator): Legacy combined position/rotation actuator kept for existing graphs.
+- [Motion 2D (Motion2DActuator)](nodes.html#Motion2DActuator): Legacy combined 2D motion actuator kept for existing graphs.
+- [Mouse (Mouse2DActuator)](nodes.html#Mouse2DActuator): Controls mouse cursor behavior in a 2D graph using the selected mode.
+- [Mouse (MouseActuator)](nodes.html#MouseActuator): Controls mouse cursor behavior using the selected mode.
+- [Mouse (MouseSensor)](nodes.html#MouseSensor): Tests mouse input conditions. Use for mouse-driven interactions.
+- [Move Character 2D (MoveCharacter2D)](nodes.html#MoveCharacter2D): Sets an explicit CharacterBody2D's velocity in units/second and calls move_and_slide once. Use once per physics tick; do not multiply velocity by delta. Invalid targets are ignored. Supply gravity/jump velocity separately; do not combine with Character 2D Physics on the same body.
+- [Move Character 3D (MoveCharacter3D)](nodes.html#MoveCharacter3D): Sets an explicit CharacterBody3D's velocity in units/second and calls move_and_slide once. Use once per physics tick; do not multiply velocity by delta. Invalid targets are ignored. Supply gravity/jump velocity separately; do not combine with Character 3D Physics on the same body.
+- [Movement Detected (Movement2DSensor)](nodes.html#Movement2DSensor): Detects if a 2D node is moving in specific directions. Check which directions to monitor. Active when any checked direction moves past the threshold.
+- [Movement Detected (MovementSensor)](nodes.html#MovementSensor): Detects if the node is moving in specific directions. Check which directions to monitor. Active when any checked direction moves past the threshold.
+- [Music (MusicActuator)](nodes.html#MusicActuator): Three modes: Tracks: define and create music players at startup. Set: set which track is current (and optionally play it). Control: play, stop, pause, resume, or crossfade from current to another track.
+- [Object Flash (ObjectFlash2DActuator)](nodes.html#ObjectFlash2DActuator): Flash a 2D object with a temporary color overlay.
+- [Object Flash (ObjectFlashActuator)](nodes.html#ObjectFlashActuator): Flashes a mesh/object with a temporary color overlay. Type a node name, not a path. "self" also works on physics bodies by searching for a mesh child.
+- [Object Pool (ObjectPoolActuator)](nodes.html#ObjectPoolActuator): Spawns objects from reusable pools. Faster than instancing — reuses inactive nodes. Pools are created at startup.
+- [Object Shake (ObjectShake2DActuator)](nodes.html#ObjectShake2DActuator): Temporarily shakes a 2D target for impact feedback.
+- [Object Shake (ObjectShakeActuator)](nodes.html#ObjectShakeActuator): Shakes a named object by rotation, translation, or scale, then returns it to its starting value. Type a node name, not a path. Use multiple Object Shake actuators for multiple effects.
+- [One Shot Event (Compatibility) (DoOnceSensor)](nodes.html#DoOnceSensor): Legacy event that fires once after processing starts. For an incoming execution path and Reset input, use the Do Once action.
+- [Open Level (OpenLevelActuator)](nodes.html#OpenLevelActuator): Loads another Godot scene. Unreal: Open Level. Godot: SceneTree.change_scene_to_file().
+- [Open Level / Restart Level (SceneActuator)](nodes.html#SceneActuator): Changes or restarts the current Godot scene. Unreal users know this as Open Level.
+- [Parent (ParentActuator)](nodes.html#ParentActuator): Changes a node parent relationship. Use to attach or detach an object at runtime.
+- [Physics (PhysicsActuator)](nodes.html#PhysicsActuator): Changes physics behavior on a 3D body using the selected operation.
+- [Physics 2D (Physics2DSensor)](nodes.html#Physics2DSensor): Checks CharacterBody2D collision state: on floor, on wall, or on ceiling. Use this for jump checks, wall checks, ceiling bumps, and platformer logic.
+- [Play Animation (AnimationActuator)](nodes.html#AnimationActuator): Controls a Godot AnimationPlayer.
+- [Popup (UIPopupActuator)](nodes.html#UIPopupActuator): Shows, hides, toggles, or centers a Popup/Window-like UI node.
+- [Preload (PreloadActuator)](nodes.html#PreloadActuator): Preloads resources (materials, scenes, textures, audio, meshes) into memory before they are needed, preventing runtime hitches and frame drops.
+- [Print String (PrintStringActuator)](nodes.html#PrintStringActuator): Prints text to Godot's Output panel. Unreal: Print String. GDScript: print().
+- [Progress Bar (ProgressBar2DActuator)](nodes.html#ProgressBar2DActuator): Sets the value, min, or max of a ProgressBar, Slider, or Range UI node.
+- [Progress Bar (ProgressBarActuator)](nodes.html#ProgressBarActuator): Sets the value, min, or max of a ProgressBar, HSlider, VSlider, or any Range node found by name anywhere in the current scene tree.
+- [Progress Bar (UIProgressBarActuator)](nodes.html#UIProgressBarActuator): Sets the value, min, or max of a ProgressBar, Slider, or Range UI node.
+- [Property (PropertyActuator)](nodes.html#PropertyActuator): Sets properties on a target node. Choose the node type to see its available properties. Leave a field empty to skip setting that property. ⚠ Adds @export in Inspector — assign the target node.
+- [Proximity (ProximitySensor)](nodes.html#ProximitySensor): Detects objects within a distance and optional angle. Uses groups to filter which objects are detected.
+- [Proximity 2D (Proximity2DSensor)](nodes.html#Proximity2DSensor): Detects objects within a distance and optional angle. Uses groups to filter which objects are detected.
+- [Random (RandomActuator)](nodes.html#RandomActuator): Writes a random value to an existing script variable. Choose a distribution and optional seed for gameplay variation.
+- [Random (RandomSensor)](nodes.html#RandomSensor): Activates randomly each time it is evaluated. Pair with a Delay Trigger to control how often it rolls. Useful for random behaviors, AI variation, and loot rolls.
+- [Random (UIRandomSensor)](nodes.html#UIRandomSensor): Randomly activates based on chance.
+- [Restore State (RestoreState)](nodes.html#RestoreState): Preflights all state keys and types before assigning a live Object's properties. Unknown, read-only or incompatible values fail before assignment. User setters remain ordinary code and their side effects cannot be rolled back.
+- [Return (FunctionReturn)](nodes.html#FunctionReturn): Ends the current function call and supplies its return value. Return exits nested loops and sequences. Use only on a Function Entry execution path.
+- [Rotate Towards (RotateTowards2DActuator)](nodes.html#RotateTowards2DActuator): Rotates toward a named Node2D or nearest group member at a configured angular speed.
+- [Rotate Towards (RotateTowardsActuator)](nodes.html#RotateTowardsActuator): Rotates this node to face a target found by name or group. Useful for turrets, enemies tracking a player, or any look-at behaviour.
+- [Rumble (RumbleActuator)](nodes.html#RumbleActuator): Trigger controller haptic vibration. Vibrate: manual motor control for a set duration. Stop: immediately stop all vibration. Pattern: built-in presets that play to completion. The sensor only needs to fire once — the pattern finishes even if the sensor stops.
+- [Save / Load (SaveLoad2DActuator)](nodes.html#SaveLoad2DActuator): Saves or restores selected 2D transforms and scalar script variables in a JSON slot. Nodes must already exist at their saved paths.
+- [Save / Load (SaveLoadActuator)](nodes.html#SaveLoadActuator): Saves or restores selected 3D transforms and script variables. Use for checkpoints; this is not whole-scene serialization.
+- [Save Game Data (SaveGameData)](nodes.html#SaveGameData): Writes a data Dictionary under user:// with a schema version, checksum, temporary replacement and previous-good backup. Unsupported live references or I/O failures leave Success false; Then still runs.
+- [Scale 2D (Scale2DActuator)](nodes.html#Scale2DActuator): Changes a 2D object's scale, instantly or with a tween.
+- [Screen Flash (ScreenFlashActuator)](nodes.html#ScreenFlashActuator): Flashes a color over the screen. Press "Apply Code" and the plugin creates the required nodes automatically. Works automatically in both standard and split-screen setups.
+- [Screen Flash (UIScreenFlashActuator)](nodes.html#UIScreenFlashActuator): Flashes a full-screen ColorRect overlay.
+- [Screen Shake (ScreenShakeActuator)](nodes.html#ScreenShakeActuator): Trauma-based camera shake. Type the Camera3D node name. The generated script searches the whole current scene tree, so this brick can live on any 3D node.
+- [Script Controller (ScriptController)](nodes.html#ScriptController): Loads and instantiates a GDScript once, then calls run(node) when the chain condition is active. Use for reusable handwritten behavior.
+- [Scroll (UIScrollActuator)](nodes.html#UIScrollActuator): Sets or adds to a ScrollContainer scroll position.
+- [Send Message (MessageActuator)](nodes.html#MessageActuator): Sends a subject and body through the GDBlueprints message listener group. For native Godot signals, use Emit Signal.
+- [Sequence (SequenceExecution)](nodes.html#SequenceExecution): Runs Then 0 through Then 3 in order, waiting for each connected path to finish. Unconnected outputs are skipped. Chain another Sequence for more outputs.
+- [Set Actor Location (2D) (Position2DActuator)](nodes.html#Position2DActuator): Moves a Node2D using Godot position/global_position.
+- [Set Actor Location (3D) (PositionActuator)](nodes.html#PositionActuator): Moves a Node3D. Unreal Actor Location maps most closely to Node3D.global_position.
+- [Set Actor Rotation (2D) (Rotation2DActuator)](nodes.html#Rotation2DActuator): Sets Node2D rotation.
+- [Set Actor Rotation (3D) (RotationActuator)](nodes.html#RotationActuator): Sets Node3D rotation.
+- [Set Actor Scale (3D) (ScaleActuator)](nodes.html#ScaleActuator): Sets Node3D scale.
+- [Set Actor Transform (TransformsActuator)](nodes.html#TransformsActuator): Sets position, rotation and scale. Its variable rows accept value-pin connections in GDBlueprints.
+- [Set Camera (SetCamera2DActuator)](nodes.html#SetCamera2DActuator): Makes the named Camera2D the active camera. Use a one-shot sensor when possible so make_current() is not called every frame.
+- [Set Local (SetFunctionLocal)](nodes.html#SetFunctionLocal): Assigns a declared local in the current function invocation. Other calls, including recursive calls, have independent locals. Read locals from Function Entry output pins.
+- [Set Object Property (SetObjectPropertyActuator)](nodes.html#SetObjectPropertyActuator): Changes an Inspector/script property on another live Godot Object using Object.set().
+- [Set Variable (VariableActuator)](nodes.html#VariableActuator): Changes a local or global variable.
+- [Set View Target / Active Camera (SetCameraActuator)](nodes.html#SetCameraActuator): Makes a Godot Camera3D active.
+- [Set Visibility (VisibilityActuator)](nodes.html#VisibilityActuator): Shows, hides, or toggles a Godot node.
+- [Slider (UISliderActuator)](nodes.html#UISliderActuator): Sets or adds to a Slider or Range value.
+- [Smooth Follow Camera (SmoothFollowCamera2DActuator)](nodes.html#SmoothFollowCamera2DActuator): Smoothly follows this Node2D with the named Camera2D while maintaining the camera's initial offset from the target.
+- [Smooth Follow Camera (SmoothFollowCameraActuator)](nodes.html#SmoothFollowCameraActuator): Smoothly follows this node with the assigned Camera3D, maintaining the camera's initial offset from the target.  Position follow: camera tracks the node's position per axis. Rotation follow: camera orbits the node, keeping it in frame. Dead zone: camera only moves once the node exceeds the threshold.  ⚠ Adds an @export in the Inspector — assign your Camera3D there.
+- [Spawn / Destroy Actor (EditObjectActuator)](nodes.html#EditObjectActuator): Creates or removes Godot nodes. PackedScene.instantiate() is the closest Godot equivalent to Spawn Actor From Class.
+- [Spawn Scene (SpawnScene)](nodes.html#SpawnScene): Instantiates a PackedScene under an explicit live parent. Optional Transform2D/Transform3D is local to that parent and applied before ready. Instance is null on invalid input; Then still runs. Use outside physics-query signal callbacks, or defer the calling event.
+- [Split Screen (SplitScreen2DActuator)](nodes.html#SplitScreen2DActuator): Builds a split-screen arrangement using separate viewports and cameras for 2D players.
+- [Split Screen (SplitScreenActuator)](nodes.html#SplitScreenActuator): Creates a split screen layout. Apply Code always builds all 4 SubViewportContainers. Each player count has its own independent layout. Change split_screen_players at runtime to switch counts without re-applying code. ** Use an Always sensor so the layout updates every frame.
+- [Sprite Animation (SpriteAnimation2DActuator)](nodes.html#SpriteAnimation2DActuator): Play, stop, or pause AnimatedSprite2D animations.
+- [Sprite Frames (SpriteFramesActuator)](nodes.html#SpriteFramesActuator): Play, stop, or pause Sprite3D / AnimatedSprite3D frame animations. Finds the target by name anywhere in the scene tree. Leave Target Node empty to use the node this script is on.
+- [State (StateActuator)](nodes.html#StateActuator): Changes the active graph state to control which state-specific chains run.
+- [Steering (MoveTowards2DActuator)](nodes.html#MoveTowards2DActuator): Steers a Node2D with Seek, Flee, Arrive, Wander, Maintain Distance, or Orbit behaviors.
+- [Steering (MoveTowardsActuator)](nodes.html#MoveTowardsActuator): Steers a node using reusable movement behaviors. Seek: move toward a target Flee: move away Arrive: slow as the target is reached Wander: move with changing randomized headings Maintain Distance: approach or retreat to hold a range Orbit: circle a target Path Follow: use NavigationAgent3D for obstacle-aware movement.
+- [Switch on Int (SwitchIntExecution)](nodes.html#SwitchIntExecution): Evaluates Selection once and runs its matching Case 0..3 output, or Default. Case values must be unique. Godot enum values are integers and can use this node.
+- [Switch on String (SwitchStringExecution)](nodes.html#SwitchStringExecution): Evaluates Selection once and routes an exact, case-sensitive string match to Case 0..3, otherwise Default. Case values must be unique.
+- [Tab (UITabActuator)](nodes.html#UITabActuator): Changes the active tab on a TabContainer.
+- [Teleport (TeleportActuator)](nodes.html#TeleportActuator): Instantly sets position to a target node or coordinates. Useful for respawning, portals, checkpoints.  ⚠ Target Node mode adds an @export in the Inspector — assign the destination node there.
+- [Teleport 2D (Teleport2DActuator)](nodes.html#Teleport2DActuator): Instantly sets position to a target Node2D or coordinates. Useful for respawning, portals, checkpoints, and spawn points.
+- [Text (Text2DActuator)](nodes.html#Text2DActuator): Updates a Label, RichTextLabel, or other text UI node.
+- [Text (TextActuator)](nodes.html#TextActuator): Updates a Label, Label3D, or RichTextLabel by node name. Searches the whole current scene tree, so this brick can live on any node.
+- [Text (UITextActuator)](nodes.html#UITextActuator): Updates a Label, RichTextLabel, or other text UI node.
+- [Timer Event (DelaySensor)](nodes.html#DelaySensor): Starts a timer when its chain is evaluated, then activates for the configured duration. Zero duration fires for one update. This event has no incoming execution pin.
+- [Timer Event (UIDelaySensor)](nodes.html#UIDelaySensor): Triggers after a delay or at an interval.
+- [Torque (TorqueActuator)](nodes.html#TorqueActuator): Applies torque to rotate a RigidBody3D. Use physics updates for continuous torque.
+- [Tween (Tween2DActuator)](nodes.html#Tween2DActuator): Tween a 2D node property such as position, rotation, scale, or modulate.
+- [Tween (TweenActuator)](nodes.html#TweenActuator): Animates any property on self or on a node found by name anywhere in the current scene tree.
+- [Tween (UITweenActuator)](nodes.html#UITweenActuator): Tweens a UI node property.
+- [Variable (UIVariableSensor)](nodes.html#UIVariableSensor): Compares a variable value.
+- [Visibility (UIVisibilityActuator)](nodes.html#UIVisibilityActuator): Shows, hides, or toggles a UI node.
+- [Waypoint Path (WaypointPath2DActuator)](nodes.html#WaypointPath2DActuator): Moves this node through editable Node2D waypoint points or along a Path2D curve.
+- [Waypoint Path (WaypointPathActuator)](nodes.html#WaypointPathActuator): Moves this node through a series of waypoints or along an editable Path3D curve.
+- [Window (UIWindowActuator)](nodes.html#UIWindowActuator): Shows, hides, toggles, or centers a Window node.

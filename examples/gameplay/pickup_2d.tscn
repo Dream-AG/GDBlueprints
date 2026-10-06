@@ -1,0 +1,15 @@
+[gd_scene format=3]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3qgsy"]
+size = Vector2(18, 18)
+
+[node name="Pickup" type="StaticBody2D" unique_id=1009775749 groups=["gdb_demo_pickup"]]
+collision_layer = 2
+collision_mask = 0
+
+[node name="@CollisionShape2D@2" type="CollisionShape2D" parent="." unique_id=1606189692]
+shape = SubResource("RectangleShape2D_3qgsy")
+
+[node name="@Polygon2D@3" type="Polygon2D" parent="." unique_id=1468280113]
+color = Color(1, 0.84313726, 0, 1)
+polygon = PackedVector2Array(-9, -9, 9, -9, 9, 9, -9, 9)
