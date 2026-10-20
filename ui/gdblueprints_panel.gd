@@ -3393,8 +3393,6 @@ func _create_graph_node_from_data(node_data: Dictionary) -> GraphNode:
 	var position = node_data["position"]
 	var properties = node_data.get("properties", {})
 	var instance_name = node_data.get("instance_name", "")
-	var debug_enabled = node_data.get("debug_enabled", false)
-	var debug_message = node_data.get("debug_message", "")
 
 	# Create brick instance
 	var brick_instance = _create_brick_instance(brick_class)
@@ -3404,10 +3402,6 @@ func _create_graph_node_from_data(node_data: Dictionary) -> GraphNode:
 	# Restore instance name
 	if not instance_name.is_empty():
 		brick_instance.set_instance_name(instance_name)
-
-	# Restore debug fields
-	brick_instance.debug_enabled = debug_enabled
-	brick_instance.debug_message = debug_message
 
 	# Restore properties
 	for prop_name in properties:
@@ -3900,14 +3894,6 @@ func _on_instance_name_changed(new_name: String, graph_node: GraphNode, brick_in
 	_property_helper._on_instance_name_changed(new_name, graph_node, brick_instance)
 
 
-func _on_debug_enabled_changed(enabled: bool, graph_node: GraphNode, brick_instance) -> void:
-	_property_helper._on_debug_enabled_changed(enabled, graph_node, brick_instance)
-
-
-func _on_debug_message_changed(new_message: String, graph_node: GraphNode, brick_instance) -> void:
-	_property_helper._on_debug_message_changed(new_message, graph_node, brick_instance)
-
-
 func _on_copy_bricks_pressed() -> void:
 	_clipboard_helper.on_copy_bricks_pressed()
 
@@ -4175,22 +4161,6 @@ func _add_view_code_button(graph_node: GraphNode) -> void:
 		return
 	if graph_node.has_meta("brick_data"):
 		var member_id := str(graph_node.get_meta("brick_data").get("brick_class", ""))
-		var brick = graph_node.get_meta("brick_data").brick_instance
-		if str(graph_node.get_meta("brick_data").get("brick_type", "")) in ["controller", "actuator"]:
-			var breakpoint_button := Button.new()
-			breakpoint_button.name = "BreakpointButton"
-			breakpoint_button.toggle_mode = true
-			breakpoint_button.button_pressed = brick.debug_enabled
-			breakpoint_button.text = "● Breakpoint" if brick.debug_enabled else "○ Breakpoint"
-			breakpoint_button.tooltip_text = "Pause before this execution node. Synchronous Function nodes are trace-only so their public methods remain normal non-awaiting GDScript calls."
-			breakpoint_button.toggled.connect(func(enabled: bool):
-				brick.debug_enabled = enabled
-				breakpoint_button.text = "● Breakpoint" if enabled else "○ Breakpoint"
-				breakpoint_button.modulate = Color("ff625f") if enabled else Color.WHITE
-				_save_graph_to_metadata("Toggle Graph Breakpoint")
-			)
-			breakpoint_button.modulate = Color("ff625f") if brick.debug_enabled else Color.WHITE
-			graph_node.get_titlebar_hbox().add_child(breakpoint_button)
 		if member_id in ["CallGraphFunction", "CallCustomEventActuator", "ConnectSignalActuator", "EmitTypedSignal"]:
 			var browse := Button.new()
 			browse.name = "BrowseMembersButton"

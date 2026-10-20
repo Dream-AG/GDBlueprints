@@ -4,7 +4,6 @@ const Registry = preload("res://addons/GDBlueprints/core/brick_registry.gd")
 const Manager = preload("res://addons/GDBlueprints/core/gdblueprints_manager.gd")
 const Builder = preload("res://addons/GDBlueprints/ui/execution_graph_builder.gd")
 const Snapshot = preload("res://addons/GDBlueprints/core/debug_snapshot.gd")
-const Debugger = preload("res://addons/GDBlueprints/gdblueprints_debugger.gd")
 
 var failures: Array[String] = []
 
@@ -36,52 +35,26 @@ func _run() -> void:
 	var graph := GraphEdit.new()
 	var panel_fixture = {"graph_edit":graph, "current_node":owner}
 	var event = _node("event", "CustomEventSensor", {})
-	var action = _node("action", "PrintStringActuator", {"text":"hello"}, true)
+	var action = _node("action", "PrintStringActuator", {"text":"hello"})
 	graph.add_child(event)
 	graph.add_child(action)
 	graph.connect_node(event.name, 0, action.name, 0)
 	var adapter := PanelAdapter.new(panel_fixture)
 	var chains := Builder.build(adapter)
 	var generated := Manager.new()._generate_code_for_chains(owner, chains)
-	check(generated.contains("before_node(self, \"action\", _entry, _flow, true)"), "Async breakpoint instrumentation")
-	check(generated.contains("debug_snapshot.gd"), "Debugger snapshot preload")
+	check(generated.contains("trace_node(self, \"action\", _entry, _flow)"), "Trace instrumentation")
+	check(not generated.contains("before_node(") and not generated.contains("_GDBDebugSnapshot"), "Removed graph-breakpoint instrumentation")
 	var compiled := GDScript.new()
 	compiled.source_code = "extends Node\n" + generated
 	check(compiled.reload() == OK, "Instrumented graph parse")
-
-	var debugger := Debugger.new()
-	root.add_child(debugger)
-	await process_frame
-	debugger.before_node(owner, "pause_here", "in", flow, true)
-	check(debugger._paused and paused, "Breakpoint did not pause the SceneTree")
-	debugger._resume("continue")
-	check(not debugger._paused and not paused, "Continue did not resume the SceneTree")
-	debugger._mode = "step_over"
-	debugger._origin_depth = 2
-	check(not _would_pause(debugger, 3, false) and _would_pause(debugger, 2, false), "Step Over depth semantics")
-	debugger._mode = "step_out"
-	debugger._origin_depth = 2
-	check(not _would_pause(debugger, 2, false) and _would_pause(debugger, 1, false), "Step Out depth semantics")
-	debugger._mode = "continue"
-	check(_would_pause(debugger, 4, true) and not _would_pause(debugger, 4, false), "Breakpoint/Continue semantics")
-	debugger.queue_free()
 	graph.free()
 	owner.free()
 	print("Milestone 4 debugger failures: ", failures)
 	quit(0 if failures.is_empty() else 1)
 
-func _would_pause(debugger, depth: int, breakpoint_enabled: bool) -> bool:
-	if breakpoint_enabled: return true
-	match debugger._mode:
-		"step_into": return true
-		"step_over": return depth <= debugger._origin_depth
-		"step_out": return depth < debugger._origin_depth
-	return false
-
-func _node(id: String, type: String, properties: Dictionary, breakpoint_enabled: bool = false) -> GraphNode:
+func _node(id: String, type: String, properties: Dictionary) -> GraphNode:
 	var brick = load(Registry.get_script_path(type)).new()
 	brick.properties.merge(properties, true)
-	brick.debug_enabled = breakpoint_enabled
 	var node := GraphNode.new()
 	node.name = id
 	node.set_meta("brick_data", {"brick_instance":brick, "brick_class":type, "brick_type":Registry.get_brick_info(type).type})

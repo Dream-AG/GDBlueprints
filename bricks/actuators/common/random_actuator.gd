@@ -176,39 +176,26 @@ func generate_code(node: Node, chain_name: String) -> Dictionary:
 	code_lines.append("")
 
 	# Generate value based on distribution
-	var debug_code = get_debug_code()
-	var debug_msg = debug_message if not debug_message.is_empty() else "Random Actuator"
-
 	match distribution:
 		"bool_constant":
 			var bool_val = properties.get("bool_value", true)
 			code_lines.append("self.%s = %s" % [sanitized_name, "true" if bool_val else "false"])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%s\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"bool_uniform":
 			code_lines.append("self.%s = %s.randf() < 0.5" % [sanitized_name, rng_var])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%s\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"bool_bernoulli":
 			var prob = properties.get("bool_probability", 0.5)
 			code_lines.append("self.%s = %s.randf() < %.3f" % [sanitized_name, rng_var, prob])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%s\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"int_constant":
 			var int_val = properties.get("int_value", 0)
 			code_lines.append("self.%s = %d" % [sanitized_name, int_val])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%d\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"int_uniform":
 			var int_min = properties.get("int_min", 0)
 			var int_max = properties.get("int_max", 100)
 			code_lines.append("self.%s = %s.randi_range(%d, %d)" % [sanitized_name, rng_var, int_min, int_max])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%d\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"int_poisson":
 			var lambda_val = properties.get("int_lambda", 1.0)
@@ -220,21 +207,15 @@ func generate_code(node: Node, chain_name: String) -> Dictionary:
 			code_lines.append("\t_poisson_sum += 1")
 			code_lines.append("\t_poisson_product *= %s.randf()" % rng_var)
 			code_lines.append("self.%s = _poisson_sum - 1" % sanitized_name)
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%d\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"float_constant":
 			var float_val = properties.get("float_value", 0.0)
 			code_lines.append("self.%s = %.3f" % [sanitized_name, float_val])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%0.3f\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"float_uniform":
 			var float_min = properties.get("float_min", 0.0)
 			var float_max = properties.get("float_max", 1.0)
 			code_lines.append("self.%s = %s.randf_range(%.3f, %.3f)" % [sanitized_name, rng_var, float_min, float_max])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%0.3f\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"float_normal":
 			var mean = properties.get("float_mean", 0.0)
@@ -244,16 +225,12 @@ func generate_code(node: Node, chain_name: String) -> Dictionary:
 			code_lines.append("var _u2 = %s.randf()" % rng_var)
 			code_lines.append("var _z0 = sqrt(-2.0 * log(_u1)) * cos(2.0 * PI * _u2)")
 			code_lines.append("self.%s = %.3f + %.3f * _z0" % [sanitized_name, mean, stddev])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%0.3f\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		"float_neg_exp":
 			var lambda_exp = properties.get("float_lambda", 1.0)
 			code_lines.append("# Negative exponential distribution")
 			code_lines.append("var _uniform = %s.randf()" % rng_var)
 			code_lines.append("self.%s = -log(1.0 - _uniform) / %.3f" % [sanitized_name, lambda_exp])
-			if not debug_code.is_empty():
-				code_lines.append("print(\"%s - Set %s = %%0.3f\" %% self.%s)" % [debug_msg, sanitized_name, sanitized_name])
 
 		_:
 			code_lines.append("pass # Unknown distribution type")

@@ -16,7 +16,7 @@ If your attached script already defines `_ready`, `_process`, or another callbac
 
 - [Functions and locals](functions.html), [Collections and enums](types-and-enums.html), and [GDScript interoperability](gdscript-interop.html).
 - [Roadmap](roadmap.html): completed milestones and the next development phase.
-- [Debug graphs](debugging.html): breakpoints, stepping, active-node highlights, and activation values.
+- [Debug graphs](debugging.html): Godot Script breakpoints, active-node highlights, watches, and activation values.
 - [Use the graph](user-guide.html): pins, variables, compilation, and handwritten scripts.
 - [All Blueprint nodes](nodes.html): searchable live inventory with settings, outputs, requirements, and audit results.
 - [Objects and signals](references-and-scenes.html): references, property browsing, scenes, and native Godot communication.

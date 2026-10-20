@@ -1973,16 +1973,6 @@ func _on_instance_name_changed(new_name: String, graph_node: GraphNode, brick_in
 	panel._save_graph_to_metadata()
 
 
-func _on_debug_enabled_changed(enabled: bool, graph_node: GraphNode, brick_instance) -> void:
-	brick_instance.debug_enabled = enabled
-	panel._save_graph_to_metadata()
-
-
-func _on_debug_message_changed(new_message: String, graph_node: GraphNode, brick_instance) -> void:
-	brick_instance.debug_message = new_message
-	panel._save_graph_to_metadata()
-
-
 func _on_enum_property_changed(index: int, graph_node: GraphNode, property_name: String, property_type: int) -> void:
 	# Handle enum property changes from OptionButton
 	if not graph_node.has_meta("brick_data"):

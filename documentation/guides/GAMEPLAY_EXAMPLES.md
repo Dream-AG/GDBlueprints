@@ -39,8 +39,8 @@ These definitions live in the normal discovered node folders. No special registr
 
 ## Verification and boundaries
 
-`tests/milestone5_gameplay.gd` runs the shipped scenes through real physics frames: normalized input, movement against obstacles, 3D grounded jumping and landing, spawning, overlaps, damage/respawn, cooldown, pickup deletion, win/loss HUD state, button restart, invalid references, transformed parents, and graph save/reload/recompile. It also checks configurable value-node authoring and debugger pause/cancellation regressions.
+`tests/milestone5_gameplay.gd` runs the shipped scenes through real physics frames: normalized input, movement against obstacles, 3D grounded jumping and landing, spawning, overlaps, damage/respawn, cooldown, pickup deletion, win/loss HUD state, button restart, invalid references, transformed parents, and graph save/reload/recompile. It also checks configurable value-node authoring and trace/debugger-hook regressions.
 
 Maintainers can deliberately regenerate the examples using `tests/build_gameplay_examples.gd` in a disposable project. This overwrites the shipped example scenes and their generated scripts; do not use it to compile your own edited example.
 
-The examples cover local single-player gameplay. They do not validate multiplayer, navigation, animation trees, audio, persistence, every legacy scene effect, or exported builds. Persistence/project scale is Milestone 6; platform/export and Asset Library release validation is Milestone 7.
+The examples cover local single-player gameplay. They do not themselves validate multiplayer, navigation, complex animation trees, audio, persistence, every scene effect, or exported builds. Separate persistence, native-resource, packaging, and Windows export fixtures cover representative paths in those areas; they do not establish complete platform or configuration coverage.

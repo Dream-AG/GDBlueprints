@@ -21,7 +21,7 @@ tools/package_release.py creates addon/source ZIPs, checksums and a per-file man
 ## Before a public alpha
 
 - Run the GitHub workflow on the exact commit/tag you intend to release. Resolve failures before broadening supported platforms.
-- Perform manual editor checks: breakpoints/highlighting, Undo/Redo, external-script preservation, save/reopen, keyboard gameplay and upgrading a backed-up project. Keep the alpha label and publish the actual runtime test scope described in [Maintenance and coverage](maintenance.html).
+- Perform manual editor checks: View Code and Godot gutter breakpoints, graph highlighting, Undo/Redo, external-script preservation, save/reopen, keyboard gameplay and upgrading a backed-up project. Keep the alpha label and publish the actual runtime test scope described in [Maintenance and coverage](maintenance.html).
 - Choose the public maintainer/publisher identity and repository URL. Retain the full MIT license and upstream credits. Review project-specific data and commit history before pushing.
 - Add screenshots of the actual editor graph and both demos, plus a short installation/use video if helpful. Prepare a square icon for the listing.
 - Publish the repository and release tag, then use that exact revision/archive in the submission. Complete the submission account fields yourself.

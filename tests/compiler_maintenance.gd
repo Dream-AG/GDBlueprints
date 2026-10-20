@@ -3,7 +3,6 @@ const Compiler = preload("res://addons/GDBlueprints/core/execution_graph_compile
 var failures: Array[String] = []
 class Definition extends RefCounted:
 	func get_execution_spec() -> Dictionary: return {"kind":"action"}
-	func get_debug_code() -> String: return ""
 class CountingManager extends RefCounted:
 	var generations := 0
 	func _instantiate_brick(_data): return Definition.new()

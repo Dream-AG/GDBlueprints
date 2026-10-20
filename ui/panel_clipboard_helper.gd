@@ -137,8 +137,6 @@ func save_graph_to_metadata(action_name: String = "Edit GDBlueprints", record_ch
 				"brick_type": brick_data["brick_type"],
 				"brick_class": brick_data["brick_class"],
 				"instance_name": brick_data["brick_instance"].get_instance_name(),
-				"debug_enabled": brick_data["brick_instance"].debug_enabled,
-				"debug_message": brick_data["brick_instance"].debug_message,
 				"properties": brick_data["brick_instance"].get_properties()
 			})
 		elif child is GraphNode and child.has_meta("value_node"):
@@ -203,8 +201,6 @@ func duplicate_graph_node(original_node: GraphNode, record_change: bool = true) 
 			new_brick_instance.set_property(key, properties[key])
 
 		new_brick_instance.set_instance_name(new_name)
-		new_brick_instance.debug_enabled = brick_instance.debug_enabled
-		new_brick_instance.debug_message = brick_instance.debug_message
 
 		var name_edit = new_node.get_node_or_null("InstanceNameEdit")
 		if name_edit:
@@ -353,8 +349,6 @@ func capture_selection(selected_nodes: Array) -> Dictionary:
 			"brick_type": bd["brick_type"],
 			"brick_class": bd["brick_class"],
 			"instance_name": bi.get_instance_name(),
-			"debug_enabled": bi.debug_enabled,
-			"debug_message": bi.debug_message,
 			"properties": bi.get_properties().duplicate(true)
 		})
 

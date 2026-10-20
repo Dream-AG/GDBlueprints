@@ -8,23 +8,16 @@ const UPDATE_INTERVAL := 0.1
 const TOGGLE_KEY := KEY_F8
 const Snapshot = preload("res://addons/GDBlueprints/core/debug_snapshot.gd")
 
-signal resume_requested
-
 var _panel: PanelContainer
 var _label: Label
 var _nodes: Array[Node] = []
 var _scan_elapsed := 0.0
 var _update_elapsed := 0.0
 var _overlay_visible := true
-var _paused := false
-var _mode := "continue"
-var _origin_depth := 0
 var _current: Dictionary = {}
 var _status: Label
 var _details: RichTextLabel
 var _last_trace_msec := -100
-var _was_tree_paused := false
-var _warned_sync: Dictionary = {}
 
 
 func _ready() -> void:
@@ -88,14 +81,6 @@ func _build_overlay() -> void:
 	_status = Label.new()
 	_status.text = "Running — F8 toggles this overlay"
 	box.add_child(_status)
-
-	var controls := HBoxContainer.new()
-	box.add_child(controls)
-	for action in ["Continue", "Step Into", "Step Over", "Step Out"]:
-		var button := Button.new()
-		button.text = action
-		button.pressed.connect(_resume.bind(action.to_lower().replace(" ", "_")))
-		controls.add_child(button)
 
 	_details = RichTextLabel.new()
 	_details.fit_content = true
@@ -266,58 +251,14 @@ func _format_value(value) -> String:
 	return str(value)
 
 
-func trace_node(owner: Node, node_id: String, entry: String, flow: Dictionary, breakpoint_enabled: bool = false) -> void:
+func trace_node(owner: Node, node_id: String, entry: String, flow: Dictionary) -> void:
 	if not OS.is_debug_build(): return
-	if not _capture_trace(breakpoint_enabled): return
+	if not _capture_trace(): return
 	var snapshot := Snapshot.capture(owner, flow, node_id, entry)
-	snapshot["paused"] = false
-	snapshot["breakpoint"] = breakpoint_enabled
 	_publish(snapshot)
-	if breakpoint_enabled and not _warned_sync.has(node_id):
-		_warned_sync[node_id] = true
-		push_warning("GDBlueprints: breakpoint on synchronous function node %s is trace-only. Synchronous graph functions cannot pause; move the breakpoint to an event path." % node_id)
 
 
-func before_node(owner: Node, node_id: String, entry: String, flow: Dictionary, breakpoint_enabled: bool = false) -> void:
-	if not OS.is_debug_build(): return
-	while _paused: await resume_requested
-	if not is_instance_valid(owner): return
-	var depth := int(flow.get("meter", {}).get("depth", 0))
-	var should_pause := breakpoint_enabled
-	match _mode:
-		"step_into": should_pause = true
-		"step_over": should_pause = should_pause or depth <= _origin_depth
-		"step_out": should_pause = should_pause or depth < _origin_depth
-	if not should_pause and not _capture_trace(false): return
-	var snapshot := Snapshot.capture(owner, flow, node_id, entry)
-	if not should_pause:
-		snapshot["paused"] = false
-		_publish(snapshot)
-		return
-	_current = snapshot
-	_current["paused"] = true
-	_current["breakpoint"] = breakpoint_enabled
-	_paused = true
-	_mode = "continue"
-	_was_tree_paused = get_tree().paused
-	get_tree().paused = true
-	_publish(_current)
-	while _paused:
-		await resume_requested
-
-
-func _resume(action: String) -> void:
-	if not _paused: return
-	_origin_depth = int(_current.get("depth", 0))
-	_mode = action
-	_paused = false
-	get_tree().paused = _was_tree_paused
-	_status.text = "Running — %s" % action.replace("_", " ").capitalize()
-	resume_requested.emit()
-
-
-func _capture_trace(forced: bool) -> bool:
-	if forced: return true
+func _capture_trace() -> bool:
 	if not EngineDebugger.is_active(): return false
 	var now := Time.get_ticks_msec()
 	if now - _last_trace_msec < 100: return false
@@ -329,8 +270,7 @@ func _publish(snapshot: Dictionary) -> void:
 	_current = snapshot
 	if EngineDebugger.is_active(): EngineDebugger.send_message("gdblueprints:trace", [snapshot])
 	if not is_instance_valid(_details): return
-	var paused := bool(snapshot.get("paused", false))
-	_status.text = ("Paused at breakpoint" if bool(snapshot.get("breakpoint", false)) else "Paused while stepping") if paused else "Running"
+	_status.text = "Running — F8 toggles this overlay"
 	var lines: Array[String] = []
 	lines.append("[b]%s[/b]  node %s  input %s" % [snapshot.get("owner_name", "Node"), snapshot.get("node_id", ""), snapshot.get("entry", "")])
 	lines.append("Step %s · call depth %s" % [snapshot.get("step", 0), snapshot.get("depth", 0)])

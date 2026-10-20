@@ -80,6 +80,9 @@ func resource_helpers() -> void:
 		check(player.stream_paused, "Exported immediate spatial Pause")
 		check(audio.execute(owner, {"mode":"stop", "channel":"test"}) and not player.playing, "Exported audio Stop")
 		owner.free()
+	# Let AudioServer process stopped playback objects before the smoke process exits.
+	# Fixed-FPS acceleration can outrun the audio thread and report false shutdown leaks.
+	await frames(3)
 	DirAccess.remove_absolute(path)
 	var player := AnimationPlayer.new()
 	var library := AnimationLibrary.new()

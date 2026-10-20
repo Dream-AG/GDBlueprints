@@ -1,21 +1,18 @@
-# 0.10.0-alpha validation
+# 0.10.1-alpha validation
 
-Validated September 25, 2026, on Windows x86_64 with Godot 4.7.2 stable (`ed1daf0bf`).
+Validated October 20, 2026, on Windows x86_64 with Godot 4.7.2 stable (`ed1daf0bf`).
 
-- 263 GDScript files load; 172 node definitions validate.
-- All 20 regression/audit/catalog scripts passed, including Milestones 1–6, typed values/events/functions, safe script interoperability, node discovery, graph debugging and documentation links.
-- Generated-code audit: 912 parsed cases, zero failures; 174 cases still require configuration or representative runtime fixtures.
-- The 1,021-node fixture executed all 1,000 actions. Its measured build/compile time was 3.65 seconds during this run; this is a fixture measurement, not a general performance guarantee.
-- Official standard Godot 4.7.2 export templates were downloaded and verified against the release SHA512 checksum. Real native Windows debug and release executables passed the export smoke fixture headlessly and with OpenGL Compatibility rendering on an NVIDIA RTX 3090.
-- Exported runtime checks cover both gameplay scenes, generated input/movement/events, pickup spawn/deletion, restart, and typed save/load. Release builds create no debugger overlay and disable its processing and F8 input handler.
-- Real release-export screenshots of both demos were captured and visually inspected. They are included in the source archive's media folder, together with a 256×256 icon.
-- Documentation has 39 pages, 172 node sections and validated local links/anchors. Twelve theme tests passed.
-- Exact source and addon ZIPs are checksum/content validated and clean-imported with the plugin enabled and all 172 registry definitions present. Packaging uses empty globals and omits engine binaries, caches, test output and credentials.
-
-Release hardening found and fixed release-build debugger activity. The gameplay debugger fixture now reuses the existing autoload so it controls the same instance as generated code when a sample project enables the plugin.
+- 271 GDScript files load; all 172 registered node definitions validate.
+- All 22 isolated regression, audit, catalog, and documentation scripts passed. This includes Milestones 1–6, typed values/events/functions, safe script interoperability, automatic node discovery, sampled graph traces, playable gameplay fixtures, native resource helpers, persistence, and compiler maintenance.
+- The native resource suite passed 171 assertions across shared target resolution, UI actions, audio playback/control, animation, sprite animation, collision deferral, camera shake, and object-flash restoration.
+- Generated-code audit: 938 configurations parsed with zero failures; 151 configurations require user properties or representative scene/runtime fixtures.
+- The 1,021-node compiler fixture executed all 1,000 actions in order. Three warm/cold samples improved from 3,753/1,951/1,964 ms to 3,663/1,788/1,788 ms after edge indexing and generated-action reuse. These are fixture measurements, not general performance guarantees.
+- Official Godot 4.7.2 editor and standard export templates were downloaded from Godot's GitHub release and verified against its SHA-512 manifest. Real Windows debug and release executables passed the headless export smoke fixture without script errors or ObjectDB leak warnings.
+- Exported runtime checks cover both gameplay scenes, generated input/movement/events, pickup spawn/deletion, restart, typed save/load, all three audio-player families, animation playback, and camera-effect restoration. Release builds create no debugger overlay and disable its frame and F8 processing.
+- The offline manual has 40 pages, 172 exact node sections, validated local links/anchors, and 12 passing light/dark/system-theme tests.
+- Deterministic addon and source archives were built twice with identical checksums, every entry hash was verified, and both archive layouts clean-imported with the plugin enabled and all 172 definitions present. Packaging replaces project globals in memory and does not modify the developer's `global_vars.gd`.
+- Per-node graph breakpoint buttons, cooperative pause/step hooks, saved breakpoint/debug-message fields, and their execution-node `await` boundary were removed. View Code now leads users to Godot's normal Script gutter breakpoints; sampled graph highlighting and watch snapshots remain.
 
 ## Scope and remaining human checks
 
-This is a Windows/Godot 4.7.2 alpha candidate, not a certification of every node, engine version or platform. The new GitHub workflow configures Windows and Linux checks but has not run on GitHub yet. Other platforms, live editor highlighting/session behavior, manual keyboard playthroughs and resource-dependent legacy effects remain explicit acceptance checks in RELEASING.md. No repository or store listing was published.
-
-The sandbox reported a root-certificate-store access error during local icon/UID generation; escalated isolated tests and native exports did not. It did not affect script validation or rendering.
+This is a Windows/Godot 4.7.2 alpha candidate, not certification of every node, engine version, rendering backend, device, or platform. The repository workflow defines Windows and Linux checks but has not run on GitHub yet. Complex AnimationTree setups, split-screen rendering, hardware-dependent input/effects, multiplayer/network conditions, live editor highlighting, manual gutter-breakpoint behavior, and keyboard playthroughs remain explicit manual or platform acceptance checks. No repository release or Asset Library listing was published by this validation.

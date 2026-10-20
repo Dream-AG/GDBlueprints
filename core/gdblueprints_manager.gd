@@ -998,9 +998,6 @@ func _emit_sensor_eval(lines: Array[String], node: Node, chain_name: String, sen
 			var isolated_line = first_decl_rx.sub(code_line, "$1" + sensor_var + " = $2", false)
 			lines.append("\t" + isolated_line)
 
-	var debug_code = sensor_brick.get_debug_code()
-	if not debug_code.is_empty():
-		lines.append("\t" + debug_code)
 	return sensor_var
 
 

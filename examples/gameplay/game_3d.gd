@@ -1,7 +1,7 @@
 extends "res://addons/GDBlueprints/examples/gameplay/game_base.gd"
 
 # === GDBLUEPRINTS START ===
-# GDBlueprints generated SHA256: 510b6232da22be61b0f1f1b3f0af17675d2d2244e6c61c54a0e4f49107ac575a
+# GDBlueprints generated SHA256: 34b27a4d1ac517607f4e4124dc14911864cf9501fcf0d1f103267635b37cb205
 func _ready() -> void:
 	if not tree_exiting.is_connected(_gdb_cancel_execution): tree_exiting.connect(_gdb_cancel_execution)
 
@@ -117,7 +117,6 @@ func _blueprint_exec_reach_goal(_delta: float, _flow: Dictionary = {}) -> void:
 
 const _GDBFlow = preload("res://addons/GDBlueprints/core/execution_runtime.gd")
 const _GDBFunctions = preload("res://addons/GDBlueprints/core/function_runtime.gd")
-const _GDBDebugSnapshot = preload("res://addons/GDBlueprints/core/debug_snapshot.gd")
 var _gdb_execution_epoch: int = 0
 var _gdb_dispatch_meter: Dictionary = {}
 func _gdb_cancel_execution() -> void:
@@ -126,7 +125,7 @@ func _gdb_cancel_execution() -> void:
 func _gdb_exec_76656c6f63697479(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "velocity"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "velocity", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "velocity", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_76656c6f63697479_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_76656c6f63697479_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -143,7 +142,7 @@ func _gdb_exec_76656c6f63697479_body(_entry: String, _delta: float, _flow: Dicti
 func _gdb_exec_6d6f7665(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "move"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "move", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "move", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_6d6f7665_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_6d6f7665_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -155,7 +154,7 @@ func _gdb_exec_6d6f7665_body(_entry: String, _delta: float, _flow: Dictionary) -
 func _gdb_exec_636f6c6c656374(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "collect"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "collect", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "collect", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_636f6c6c656374_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_636f6c6c656374_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -172,7 +171,7 @@ func _gdb_exec_636f6c6c656374_body(_entry: String, _delta: float, _flow: Diction
 func _gdb_exec_687564(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "hud"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "hud", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "hud", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_687564_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_687564_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -187,7 +186,7 @@ func _gdb_exec_687564_body(_entry: String, _delta: float, _flow: Dictionary) -> 
 func _gdb_exec_737061776e5f6c6f6f70(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "spawn_loop"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "spawn_loop", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "spawn_loop", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_737061776e5f6c6f6f70_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_737061776e5f6c6f6f70_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -222,7 +221,7 @@ func _gdb_exec_737061776e5f6c6f6f70_loop_body(_delta: float, _flow: Dictionary) 
 func _gdb_exec_737061776e(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "spawn"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "spawn", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "spawn", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_737061776e_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_737061776e_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -232,7 +231,7 @@ func _gdb_exec_737061776e_body(_entry: String, _delta: float, _flow: Dictionary)
 func _gdb_exec_76616c69645f7069636b7570(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "valid_pickup"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "valid_pickup", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "valid_pickup", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_76616c69645f7069636b7570_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_76616c69645f7069636b7570_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -246,7 +245,7 @@ func _gdb_exec_76616c69645f7069636b7570_body(_entry: String, _delta: float, _flo
 func _gdb_exec_73636f7265(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "score"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "score", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "score", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_73636f7265_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_73636f7265_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -263,7 +262,7 @@ func _gdb_exec_73636f7265_body(_entry: String, _delta: float, _flow: Dictionary)
 func _gdb_exec_64657374726f79(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "destroy"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "destroy", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "destroy", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_64657374726f79_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_64657374726f79_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -273,7 +272,7 @@ func _gdb_exec_64657374726f79_body(_entry: String, _delta: float, _flow: Diction
 func _gdb_exec_68757274(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "hurt"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "hurt", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "hurt", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_68757274_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_68757274_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -288,7 +287,7 @@ func _gdb_exec_68757274_body(_entry: String, _delta: float, _flow: Dictionary) -
 func _gdb_exec_756e6c6f636b6564(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "unlocked"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "unlocked", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "unlocked", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_756e6c6f636b6564_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_756e6c6f636b6564_body(_entry: String, _delta: float, _flow: Dictionary) -> void:
@@ -302,7 +301,7 @@ func _gdb_exec_756e6c6f636b6564_body(_entry: String, _delta: float, _flow: Dicti
 func _gdb_exec_77696e(_entry: String = "in", _delta: float = 0.0, _flow: Dictionary = {}) -> void:
 	if _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)
 	if not _GDBFlow.enter(self, _flow, "win"): return
-	if has_node("/root/GDBlueprintsDebugger"): await get_node("/root/GDBlueprintsDebugger").before_node(self, "win", _entry, _flow, false)
+	if has_node("/root/GDBlueprintsDebugger"): get_node("/root/GDBlueprintsDebugger").trace_node(self, "win", _entry, _flow)
 	if _GDBFlow.valid(self, _flow): await _gdb_exec_77696e_body(_entry, _delta, _flow)
 	_flow.meter.depth -= 1
 func _gdb_exec_77696e_body(_entry: String, _delta: float, _flow: Dictionary) -> void:

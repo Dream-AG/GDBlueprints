@@ -65,7 +65,7 @@ Run `graph_functions.gd`, `milestone2_types.gd`, and `milestone3_interop.gd` in 
 
 ## Milestone 4
 
-Run `milestone4_debugger.gd` to check stable breakpoint instrumentation, bounded activation snapshots, pause/resume, and call-depth stepping. Complete the manual game/editor test in `documentation/debugging.html` before release because the headless suite cannot prove the live editor debugger connection's visual highlight.
+Run `milestone4_debugger.gd` to check stable trace instrumentation, bounded activation snapshots, and the absence of graph-controlled pause hooks. Complete the manual game/editor test in `documentation/debugging.html` before release because the headless suite cannot prove a live Godot gutter breakpoint or the editor debugger connection's visual highlight.
 
 ## Milestone 5
 

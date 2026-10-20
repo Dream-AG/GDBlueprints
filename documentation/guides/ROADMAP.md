@@ -12,7 +12,7 @@ These foundations are available in 0.7.0-alpha. They do not imply full-game runt
 
 ## Milestone 4: graph debugging
 
-Completed in 0.7.0-alpha: stable-ID source mapping, active-node highlights, graph breakpoints on asynchronous execution nodes, Continue/Step Into/Step Over/Step Out controls, and bounded inspection of arguments, loop values, locals, captured results, and watched members. Synchronous function nodes remain trace-only to preserve ordinary non-awaiting GDScript calls.
+Completed in 0.7.0-alpha and simplified in 0.10.1-alpha: stable-ID source mapping, sampled active-node highlights, and bounded inspection of arguments, loop values, locals, captured results, and watched members. Breakpoints now use Godot's Script debugger through View Code, which keeps graph execution free of cooperative pause/step awaits.
 
 ## Milestone 5: core gameplay coverage
 

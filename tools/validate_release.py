@@ -120,7 +120,7 @@ def exports(args, logs):
             run([engine, '--headless', '--path', project, '--export-' + mode, 'Native', binary, '--log-file', logs / f'export-{mode}-engine.log'], logs / f'export-{mode}.log', timeout=300)
             if system == 'Linux': binary.chmod(0o755)
             display = ['--rendering-method', 'gl_compatibility'] if args.render else ['--headless']
-            run([binary, '--verbose', '--fixed-fps', '60', '--log-file', logs / f'runtime-{mode}-engine.log'] + display,
+            run([binary, '--verbose', '--log-file', logs / f'runtime-{mode}-engine.log'] + display,
                 logs / f'runtime-{mode}.log', rf'Export smoke failures: \[\]; debug={str(mode == "debug").lower()}')
 
 

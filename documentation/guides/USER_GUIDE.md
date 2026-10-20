@@ -67,7 +67,7 @@ Rebuild from Script recovers graph information from generated metadata/code. It 
 
 ## Debugging
 
-Use graph breakpoints, stepping, active-node highlights, activation snapshots, node View Code, and Godot's normal debugger. The runtime overlay uses F8 to show or hide watched values and graph traces. See [Debug graphs](debugging.html). A successful compile proves syntax, not that scene paths, resource assignments, or gameplay assumptions are correct.
+Use active-node highlights, activation snapshots, node View Code, and Godot's normal Script debugger. Set breakpoints in the generated GDScript gutter; graph nodes do not store breakpoint state. The runtime overlay uses F8 to show or hide watched values and sampled graph traces. See [Debug graphs](debugging.html). A successful compile proves syntax, not that scene paths, resource assignments, or gameplay assumptions are correct.
 
 ## Delay and Do Once
 

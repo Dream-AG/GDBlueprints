@@ -102,7 +102,6 @@ static func compile(graph: Dictionary, manager, target: Node, has_actuator_senso
 	var lines: Array[String] = [
 		'const _GDBFlow = preload("res://addons/GDBlueprints/core/execution_runtime.gd")',
 		'const _GDBFunctions = preload("res://addons/GDBlueprints/core/function_runtime.gd")',
-		'const _GDBDebugSnapshot = preload("res://addons/GDBlueprints/core/debug_snapshot.gd")',
 		'var _gdb_execution_epoch: int = 0',
 		'var _gdb_dispatch_meter: Dictionary = {}',
 		'func _gdb_cancel_execution() -> void:',
@@ -131,18 +130,12 @@ static func compile(graph: Dictionary, manager, target: Node, has_actuator_senso
 		lines.append("func %s(_entry: String = \"in\", _delta: float = 0.0, _flow: Dictionary = {}) -> void:" % name)
 		lines.append("\tif _flow.is_empty(): _flow = _GDBFlow.context(_gdb_execution_epoch)")
 		lines.append("\tif not _GDBFlow.enter(self, _flow, %s): return" % var_to_str(str(node_id)))
-		var breakpoint_enabled := bool(data.get("debug_enabled", false))
-		if graph.get("sync_nodes", {}).has(str(node_id)):
-			lines.append("\tif has_node(\"/root/GDBlueprintsDebugger\"): get_node(\"/root/GDBlueprintsDebugger\").trace_node(self, %s, _entry, _flow, %s)" % [var_to_str(str(node_id)), str(breakpoint_enabled)])
-		else:
-			lines.append("\tif has_node(\"/root/GDBlueprintsDebugger\"): await get_node(\"/root/GDBlueprintsDebugger\").before_node(self, %s, _entry, _flow, %s)" % [var_to_str(str(node_id)), str(breakpoint_enabled)])
+		lines.append("\tif has_node(\"/root/GDBlueprintsDebugger\"): get_node(\"/root/GDBlueprintsDebugger\").trace_node(self, %s, _entry, _flow)" % var_to_str(str(node_id)))
 		lines.append("\tif _GDBFlow.valid(self, _flow): %s%s_body(_entry, _delta, _flow)" % [wait_prefix, name])
 		lines.append("\t_flow.meter.depth -= 1")
 		lines.append("func %s_body(_entry: String, _delta: float, _flow: Dictionary) -> void:" % name)
 		if has_actuator_sensor and not str(data.get("instance_name", "")).is_empty():
 			lines.append("\t_actuator_active_flags[%s] = true" % var_to_str(str(data.instance_name)))
-		var debug_code: String = brick.get_debug_code()
-		if not debug_code.is_empty(): lines.append("\t" + debug_code)
 		match kind:
 			"function_return":
 				lines.append("\t_GDBFunctions.finish(_flow, %s)" % str(spec.value))

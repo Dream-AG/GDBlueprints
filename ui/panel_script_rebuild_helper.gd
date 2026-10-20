@@ -487,8 +487,6 @@ func _brick_info_from_meta(meta: Dictionary, fallback_class: String) -> Dictiona
 	return {
 		"class": cls,
 		"instance_name": str(meta.get("instance_name", "")),
-		"debug_enabled": bool(meta.get("debug_enabled", false)),
-		"debug_message": str(meta.get("debug_message", "")),
 		"properties": meta.get("properties", {}) if meta.get("properties", {}) is Dictionary else {}
 	}
 
@@ -1395,8 +1393,6 @@ func _build_chains_metadata(descs: Array[Dictionary]) -> Array:
 			sensors.append({
 				"type": sensor_info["class"],
 				"instance_name": sensor_info.get("instance_name", ""),
-				"debug_enabled": sensor_info.get("debug_enabled", false),
-				"debug_message": sensor_info.get("debug_message", ""),
 				"properties": sensor_info.get("properties", {})
 			})
 
@@ -1406,16 +1402,12 @@ func _build_chains_metadata(descs: Array[Dictionary]) -> Array:
 			controllers.append({
 				"type": controller_info["class"],
 				"instance_name": controller_info.get("instance_name", ""),
-				"debug_enabled": controller_info.get("debug_enabled", false),
-				"debug_message": controller_info.get("debug_message", ""),
 				"properties": controller_info.get("properties", {})
 			})
 		elif desc["is_script_ctrl"]:
 			controllers.append({
 				"type": "ScriptController",
 				"instance_name": "",
-				"debug_enabled": false,
-				"debug_message": "",
 				"properties": {
 					"logic_mode":  desc["logic_mode"],
 					"script_path": desc["script_path"],
@@ -1427,8 +1419,6 @@ func _build_chains_metadata(descs: Array[Dictionary]) -> Array:
 			controllers.append({
 				"type": "Controller",
 				"instance_name": "",
-				"debug_enabled": false,
-				"debug_message": "",
 				"properties": {
 					"logic_mode": desc["logic_mode"],
 					"all_states": desc["all_states"],
@@ -1441,8 +1431,6 @@ func _build_chains_metadata(descs: Array[Dictionary]) -> Array:
 			actuators.append({
 				"type": act_info["class"],
 				"instance_name": act_info.get("instance_name", ""),
-				"debug_enabled": act_info.get("debug_enabled", false),
-				"debug_message": act_info.get("debug_message", ""),
 				"properties": act_info.get("properties", {})
 			})
 
@@ -1494,8 +1482,6 @@ func _build_graph_data(descs: Array[Dictionary]) -> Dictionary:
 				"brick_type":    "sensor",
 				"brick_class":   sensor_info["class"],
 				"instance_name": sensor_info.get("instance_name", ""),
-				"debug_enabled": sensor_info.get("debug_enabled", false),
-				"debug_message": sensor_info.get("debug_message", ""),
 				"properties":    sensor_info.get("properties", {})
 			})
 			sensor_ids.append(s_id)
@@ -1530,8 +1516,6 @@ func _build_graph_data(descs: Array[Dictionary]) -> Dictionary:
 			"brick_type":    "controller",
 			"brick_class":   ctrl_class,
 			"instance_name": controller_info.get("instance_name", ""),
-			"debug_enabled": controller_info.get("debug_enabled", false),
-			"debug_message": controller_info.get("debug_message", ""),
 			"properties":    ctrl_props
 		})
 
@@ -1555,8 +1539,6 @@ func _build_graph_data(descs: Array[Dictionary]) -> Dictionary:
 				"brick_type":    "actuator",
 				"brick_class":   actuators_info[a_i]["class"],
 				"instance_name": actuators_info[a_i].get("instance_name", ""),
-				"debug_enabled": actuators_info[a_i].get("debug_enabled", false),
-				"debug_message": actuators_info[a_i].get("debug_message", ""),
 				"properties":    actuators_info[a_i].get("properties", {})
 			})
 			# Controller → actuator

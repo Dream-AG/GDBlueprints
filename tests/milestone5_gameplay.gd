@@ -5,8 +5,6 @@ const BlueprintPanel = preload("res://addons/GDBlueprints/ui/gdblueprints_panel.
 const Builder = preload("res://addons/GDBlueprints/ui/execution_graph_builder.gd")
 const Manager = preload("res://addons/GDBlueprints/core/gdblueprints_manager.gd")
 const Region = preload("res://addons/GDBlueprints/core/generated_region.gd")
-const Debugger = preload("res://addons/GDBlueprints/gdblueprints_debugger.gd")
-const Flow = preload("res://addons/GDBlueprints/core/execution_runtime.gd")
 var failures: Array[String] = []
 
 func _initialize() -> void:
@@ -26,7 +24,6 @@ func run() -> void:
 	for dimension in [2, 3]:
 		await game_loop(dimension)
 		await graph_roundtrip(dimension)
-	await debugger_regressions()
 	print("Milestone 5 gameplay failures: ", failures)
 	quit(0 if failures.is_empty() else 1)
 
@@ -191,49 +188,3 @@ func value_authoring() -> void:
 	check(panel.graph_edit.get_node(id).get_meta("brick_data").brick_instance.properties.left == "edited_left", "Value configuration lost on reload")
 	panel.free()
 	owner.free()
-
-func debugger_regressions() -> void:
-	# Generated hooks resolve this exact autoload path. Reuse it when the test
-	# project enables the plugin, rather than testing a differently named instance.
-	var debugger = root.get_node_or_null("GDBlueprintsDebugger")
-	var owns_debugger := debugger == null
-	if owns_debugger:
-		debugger = Debugger.new()
-		debugger.name = "GDBlueprintsDebugger"
-		root.add_child(debugger)
-	var game: Node = load("res://addons/GDBlueprints/examples/gameplay/game_2d.tscn").instantiate()
-	root.add_child(game)
-	await frames(2)
-	game.set_physics_process(false)
-	var flow := Flow.context(game._gdb_execution_epoch)
-	flow.meter.depth = 4
-	debugger._mode = "step_out"
-	debugger._origin_depth = 2
-	debugger.before_node(game, "score", "in", flow, true)
-	check(paused and debugger._paused, "Breakpoint ignored during Step Out")
-	debugger._resume("step_into")
-	debugger.before_node(game, "destroy", "in", flow, false)
-	check(paused and debugger._paused, "Step Into did not pause actual debugger")
-	debugger._resume("continue")
-	paused = true
-	debugger.before_node(game, "score", "in", flow, true)
-	debugger._resume("continue")
-	check(paused, "Debugger cleared a preexisting SceneTree pause")
-	paused = false
-	debugger.before_node(game, "first", "in", flow, true)
-	debugger.before_node(game, "second", "in", flow, true)
-	check(debugger._current.node_id == "first", "Concurrent breakpoint replaced paused snapshot")
-	debugger._resume("continue")
-	check(debugger._paused and debugger._current.node_id == "second", "Queued breakpoint lost")
-	debugger._resume("continue")
-	check(not paused, "Concurrent breakpoints left the SceneTree paused")
-	# Run real generated code, suspend at its debugger hook, invalidate its epoch,
-	# and verify the score side effect is suppressed when execution resumes.
-	debugger._mode = "step_into"
-	game.call("_gdb_exec_73636f7265", "in", 0.0, flow)
-	check(debugger._paused and game.score == 0, "Generated score ran before breakpoint resumed")
-	game._gdb_execution_epoch += 1
-	debugger._resume("continue")
-	check(game.score == 0 and flow.meter.depth == 4, "Cancelled paused graph ran an action or leaked execution depth")
-	game.free()
-	if owns_debugger: debugger.free()

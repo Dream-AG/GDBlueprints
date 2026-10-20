@@ -50,9 +50,9 @@ See [Execution and loops](execution-model.html) for the runtime contract and int
 
 `generated_region.gd` seals generated bodies with a checksum and detects external changes inside them. `script_edit_guard.gd` checks unsaved built-in Script tabs. Writers validate combined source and recheck the disk before writing. Global declarations include serialized metadata comments for lossless type/default recovery without instantiating scripts.
 
-## Graph debugger
+## Runtime tracing and debugging
 
-`execution_graph_compiler.gd` instruments stable execution-node IDs. The runtime Autoload pauses asynchronous paths cooperatively, owns step state, and sends bounded snapshots through `EngineDebugger`. `graph_debugger_plugin.gd` receives those messages in the editor; the panel matches scene owner paths and highlights the corresponding saved graph node. `debug_snapshot.gd` serializes activation state without evaluating expressions or getters. Synchronous graph functions emit trace messages without awaiting.
+`execution_graph_compiler.gd` instruments stable execution-node IDs for sampled traces. The runtime Autoload sends bounded activation snapshots through `EngineDebugger`; `graph_debugger_plugin.gd` receives them in the editor, and the panel matches scene owner paths to highlight the corresponding saved graph node and display watched values. `debug_snapshot.gd` serializes activation state without evaluating expressions or getters. GDBlueprints does not pause or step graph execution itself. Set breakpoints in the generated GDScript with Godot's Script editor or an external debugger when execution must stop.
 
 ## Shared resource operations
 

@@ -19,12 +19,6 @@ var brick_name: String = "Blueprint Node"
 ## The instance name of this brick (user-customizable, used in code generation)
 var instance_name: String = ""
 
-## Debug mode flag
-var debug_enabled: bool = false
-
-## Debug message to print
-var debug_message: String = ""
-
 ## Properties specific to this brick type
 var properties: Dictionary = {}
 
@@ -110,8 +104,6 @@ func serialize() -> Dictionary:
 	return {
 		"type": get_stable_id(),
 		"instance_name": instance_name,
-		"debug_enabled": debug_enabled,
-		"debug_message": debug_message,
 		"properties": properties.duplicate(true)
 	}
 
@@ -120,10 +112,6 @@ func serialize() -> Dictionary:
 func deserialize(data: Dictionary) -> void:
 	if data.has("instance_name"):
 		instance_name = data["instance_name"]
-	if data.has("debug_enabled"):
-		debug_enabled = data["debug_enabled"]
-	if data.has("debug_message"):
-		debug_message = data["debug_message"]
 	if data.has("properties"):
 		# Merge saved properties over the initialized defaults rather than replacing
 		# the whole dict. This prevents stale saved data (e.g. a scene file that was
@@ -336,10 +324,3 @@ func _unique_label(chain_name: String) -> String:
 
 func _gd_string(value: String) -> String:
 	return value.c_escape()
-
-
-## Generate debug print code if debug is enabled
-func get_debug_code() -> String:
-	if debug_enabled and not debug_message.is_empty():
-		return "print(\"%s\")" % _gd_string(debug_message)
-	return ""

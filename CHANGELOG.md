@@ -4,6 +4,7 @@
 - Fix cross-node audio controls, deferred spatial pause, fade interruption, sprite self targeting and reverse-animation speed.
 - Bound overlapping audio voices and replace duration-proportional camera-shake allocation with one bound tween.
 - Index compiler edges, reuse generated actions, expand dense node formatting and add native resource runtime fixtures.
+- Remove per-node graph breakpoint buttons, their saved metadata and cooperative pause/step awaits; use View Code with Godot's Script debugger while keeping sampled graph highlights and watches.
 - Recompile existing graphs to obtain the new runtime behavior; see the maintenance guide for audio channel semantics.
 
 # GDBlueprints 0.10.0-alpha

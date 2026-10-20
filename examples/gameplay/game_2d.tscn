@@ -133,8 +133,6 @@ metadata/blueprints_for_godot_graph = {
 "nodes": [{
 "brick_class": "EventPhysicsTickSensor",
 "brick_type": "sensor",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"tick",
 "instance_name": "",
 "position": Vector2(0, 0),
@@ -142,8 +140,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "InputVector",
 "brick_type": "value",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"input",
 "instance_name": "",
 "position": Vector2(0, 300),
@@ -157,8 +153,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"velocity",
 "instance_name": "",
 "position": Vector2(340, 0),
@@ -177,8 +171,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "MoveCharacter2D",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"move",
 "instance_name": "",
 "position": Vector2(700, 0),
@@ -190,8 +182,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "OverlappingBodies",
 "brick_type": "value",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"overlaps",
 "instance_name": "",
 "position": Vector2(700, 400),
@@ -201,8 +191,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"collect",
 "instance_name": "",
 "position": Vector2(1060, 0),
@@ -220,8 +208,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"hud",
 "instance_name": "",
 "position": Vector2(1420, 0),
@@ -238,8 +224,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CustomEventSensor",
 "brick_type": "sensor",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"start_round",
 "instance_name": "",
 "position": Vector2(0, 800),
@@ -251,8 +235,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "ForEachExecution",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"spawn_loop",
 "instance_name": "",
 "position": Vector2(340, 800),
@@ -264,8 +246,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "SpawnScene",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"spawn",
 "instance_name": "",
 "position": Vector2(700, 800),
@@ -278,8 +258,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CustomEventSensor",
 "brick_type": "sensor",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"pickup",
 "instance_name": "",
 "position": Vector2(0, 1400),
@@ -291,8 +269,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "BranchController",
 "brick_type": "controller",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"valid_pickup",
 "instance_name": "",
 "position": Vector2(340, 1400),
@@ -303,8 +279,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"score",
 "instance_name": "",
 "position": Vector2(700, 1400),
@@ -321,8 +295,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "DestroyNode",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"destroy",
 "instance_name": "",
 "position": Vector2(1060, 1400),
@@ -333,8 +305,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CustomEventSensor",
 "brick_type": "sensor",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"damage",
 "instance_name": "",
 "position": Vector2(0, 1800),
@@ -346,8 +316,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"hurt",
 "instance_name": "",
 "position": Vector2(340, 1800),
@@ -365,8 +333,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CustomEventSensor",
 "brick_type": "sensor",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"reach_goal",
 "instance_name": "",
 "position": Vector2(0, 2200),
@@ -378,8 +344,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "BranchController",
 "brick_type": "controller",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"unlocked",
 "instance_name": "",
 "position": Vector2(340, 2200),
@@ -390,8 +354,6 @@ metadata/blueprints_for_godot_graph = {
 }, {
 "brick_class": "CallGraphFunction",
 "brick_type": "actuator",
-"debug_enabled": false,
-"debug_message": "",
 "id": &"win",
 "instance_name": "",
 "position": Vector2(700, 2200),
@@ -410,8 +372,6 @@ metadata/blueprints_for_godot_graph = {
 }
 metadata/blueprints_for_godot = [{
 "actuators": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "input: Vector2, delta: float",
@@ -427,8 +387,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "CallGraphFunction"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "move",
@@ -438,8 +396,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "MoveCharacter2D"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "bodies: Array[Node]",
@@ -454,8 +410,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "CallGraphFunction"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -527,8 +481,6 @@ metadata/blueprints_for_godot = [{
 }],
 "nodes": {
 "collect": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "bodies: Array[Node]",
@@ -544,8 +496,6 @@ metadata/blueprints_for_godot = [{
 "type": "CallGraphFunction"
 },
 "destroy": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "destroy",
@@ -555,8 +505,6 @@ metadata/blueprints_for_godot = [{
 "type": "DestroyNode"
 },
 "hud": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -571,8 +519,6 @@ metadata/blueprints_for_godot = [{
 "type": "CallGraphFunction"
 },
 "hurt": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "body: Node",
@@ -588,8 +534,6 @@ metadata/blueprints_for_godot = [{
 "type": "CallGraphFunction"
 },
 "move": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "move",
@@ -600,8 +544,6 @@ metadata/blueprints_for_godot = [{
 "type": "MoveCharacter2D"
 },
 "score": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -616,8 +558,6 @@ metadata/blueprints_for_godot = [{
 "type": "CallGraphFunction"
 },
 "spawn": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "spawn",
@@ -629,8 +569,6 @@ metadata/blueprints_for_godot = [{
 "type": "SpawnScene"
 },
 "spawn_loop": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_execution_id": "spawn_loop",
@@ -640,8 +578,6 @@ metadata/blueprints_for_godot = [{
 "type": "ForEachExecution"
 },
 "unlocked": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "unlocked",
@@ -651,8 +587,6 @@ metadata/blueprints_for_godot = [{
 "type": "BranchController"
 },
 "valid_pickup": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "valid_pickup",
@@ -662,8 +596,6 @@ metadata/blueprints_for_godot = [{
 "type": "BranchController"
 },
 "velocity": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "input: Vector2, delta: float",
@@ -680,8 +612,6 @@ metadata/blueprints_for_godot = [{
 "type": "CallGraphFunction"
 },
 "win": {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -700,16 +630,12 @@ metadata/blueprints_for_godot = [{
 },
 "name": "exec_tick",
 "sensors": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {},
 "type": "EventPhysicsTickSensor"
 }]
 }, {
 "actuators": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_execution_id": "spawn_loop",
@@ -718,8 +644,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "ForEachExecution"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "spawn",
@@ -730,8 +654,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "SpawnScene"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -753,8 +675,6 @@ metadata/blueprints_for_godot = [{
 }],
 "name": "exec_start_round",
 "sensors": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -765,8 +685,6 @@ metadata/blueprints_for_godot = [{
 }]
 }, {
 "actuators": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "valid_pickup",
@@ -775,8 +693,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "BranchController"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -790,8 +706,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "CallGraphFunction"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "destroy",
@@ -808,8 +722,6 @@ metadata/blueprints_for_godot = [{
 }],
 "name": "exec_pickup",
 "sensors": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "body: Node",
@@ -820,8 +732,6 @@ metadata/blueprints_for_godot = [{
 }]
 }, {
 "actuators": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "body: Node",
@@ -844,8 +754,6 @@ metadata/blueprints_for_godot = [{
 }],
 "name": "exec_damage",
 "sensors": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "body: Node",
@@ -856,8 +764,6 @@ metadata/blueprints_for_godot = [{
 }]
 }, {
 "actuators": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 &"_execution_id": "unlocked",
@@ -866,8 +772,6 @@ metadata/blueprints_for_godot = [{
 },
 "type": "BranchController"
 }, {
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "",
@@ -889,8 +793,6 @@ metadata/blueprints_for_godot = [{
 }],
 "name": "exec_reach_goal",
 "sensors": [{
-"debug_enabled": false,
-"debug_message": "",
 "instance_name": "",
 "properties": {
 "_applied_parameters": "body: Node",
