@@ -34,11 +34,7 @@ Keep the folder name and capitalization exactly `addons/GDBlueprints`. Back up y
 - [Start Here](documentation/guides/START_HERE.md)
 - [User Guide](documentation/guides/USER_GUIDE.md)
 - [Godot for Unreal Users](documentation/guides/GODOT_FOR_UNREAL_USERS.md)
-- [GDScript Interoperability](documentation/guides/GDSCRIPT_INTEROP.md)
 - [Node Reference](documentation/NODE_INDEX.md)
-- [Execution Model](documentation/guides/EXECUTION_MODEL.md)
-- [Testing and Current Limits](documentation/guides/TESTING_AND_VALIDATION.md)
-- [Release and Publishing](documentation/guides/RELEASE.md)
 
 The built offline manual starts at `documentation/index.html`.
 
