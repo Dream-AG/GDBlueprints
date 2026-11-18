@@ -1,3 +1,5 @@
+<img width="1141" height="373" alt="Screenshot 2026-10-26 094224" src="https://github.com/user-attachments/assets/fd670b8c-4a82-40bc-bc05-8476f1e7e6a4" />
+
 # GDBlueprints
 
 GDBlueprints is a visual scripting addon for Godot 4. It is meant to mimic Unreal Engine's Blueprints in both nodes and functionality, while adhering to Godot's workflow. Every node compiles to GDScript, so this is not a unique programming language.
