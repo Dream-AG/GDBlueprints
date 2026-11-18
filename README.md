@@ -1,10 +1,12 @@
 # GDBlueprints
 
-GDBlueprints is a visual scripting addon for Godot 4. It gives Unreal Engine users a familiar node-graph workflow while generating ordinary GDScript and using Godot's scenes, nodes, signals, resources, and debugger.
+GDBlueprints is a visual scripting addon for Godot 4. It is meant to mimic Unreal Engine's Blueprints in both nodes and functionality, while adhering to Godot's workflow. Every node compiles to GDScript, so this is not a unique programming language.
 
 ## Status
 
-The current release is **0.10.1-alpha** and is validated against **Godot 4.7.2 on Windows x86_64**. Its 172 registered node definitions, compiler, typed data flow, functions, events, script interoperability, persistence, and representative 2D/3D gameplay paths pass the included automated suite. This is an alpha release, not a claim of full Unreal Blueprint parity or certification for every game, platform, or node configuration.
+THIS IS STILL A WORK-IN-PROGRESS. It so far has 100+ registered node definitions, compiler, typed data flow, functions, events, script interoperability, persistence, and representative 2D/3D gameplay paths; but if far short of Unreal Engine's full node suite. It is currently functional based on limited testing, but it does produce errors despite compiling functional GDScript. But what Godot game doesn't ship with GDScript errors ;)
+
+I am continuing to develop this slowly, but since some may find value in it's current state and may want to build on top of this, I am releasing this framework now.
 
 ## What it provides
 
@@ -38,20 +40,6 @@ Keep the folder name and capitalization exactly `addons/GDBlueprints`. Back up y
 
 The built offline manual starts at `documentation/index.html`.
 
-## Add a blueprint node
-
-Read [Creating Blueprint Nodes](documentation/guides/NODE_DEFINITION_API.md). In the common case, a collaborator adds one `.gd` file that inherits the appropriate GDBlueprints base class, supplies a stable ID and metadata, declares its pins, and generates its Godot operation. The registry discovers it automatically; no central menu file needs editing. New execution semantics or shared runtime behavior require compiler/runtime support and tests in addition to the definition file.
-
-## Validation and support boundary
-
-The repository includes source loading, registry, generated-code, compiler, editor, persistence, gameplay, native-resource, export, documentation, and clean-package checks. The generated-code audit proves that every registered node has at least one configuration that emits parseable GDScript; it does not prove every property combination or scene-dependent behavior. Linux CI must pass before Linux is advertised. macOS, mobile, Web, consoles, multiplayer workflows, and several advanced Godot systems remain unverified or incomplete. See [Maintenance and Coverage](documentation/guides/MAINTENANCE.md) for the exact tested scope.
-
-When reporting a bug, include the Godot version, operating system, scene setup, graph steps, generated error, and the smallest project that reproduces it.
-
-## Contributing
-
-Read [Contributing](documentation/guides/CONTRIBUTING.md), follow the stable-ID and pin-contract rules, document Godot terminology and failure behavior, and run the relevant validation suite before opening a pull request.
-
 ## License and attribution
 
-GDBlueprints is released under the MIT License. It began from hoverbox's Logic Bricks project; retained upstream attribution and license details are in [LICENSE](LICENSE) and [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+GDBlueprints is released under the MIT License. It began from Bri the 3D Guy's Logic Bricks project; retained upstream attribution and license details are in LICENSE and THIRD_PARTY_NOTICES.md.
